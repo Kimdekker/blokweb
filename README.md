@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.rugbyworldcup.com/2023
+https://yetimotion.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Rugby Worldcup homepage
-  <img src="readme-images/page1_wchome.jpg" width="375px" alt="Homepage van het WK rugby in Frankrijk">
+https://yetimotion.com/about/
+  <img src="readme-images/yeti_about.jpg" width="375px" alt="Homepage van het WK rugby in Frankrijk">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Rugby worldcup fastasy rugby page
-  <img src="readme-images/page2_fantasywc.jpg" width="375px" alt="omschrijving van de pagina">
+https://yetimotion.com/studiolife_category/all-cool-stuff/
+  <img src="readme-images/yeti_coolstuff.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
