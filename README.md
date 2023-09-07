@@ -40,11 +40,11 @@ https://yetimotion.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
 https://yetimotion.com/about/
-  <img src="readme-images/yeti_about.jpg" width="375px" alt="Homepage van het WK rugby in Frankrijk">
+  <img src="readme-images/yeti_about.jpg" width="375px" alt="De about pagina van Yeti">
 
   #### Screenshot(s) van de tweede pagina (small screen):
 https://yetimotion.com/studiolife_category/all-cool-stuff/
-  <img src="readme-images/yeti_coolstuff.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/yeti_coolstuff.jpg" width="375px" alt="de pagina met coole content van Yeti">
  
 </details>
 
@@ -57,6 +57,44 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  1. in de about pagina werkt de screenreader niet goed. Dat komt door functie dat je kan hoveren over de headers om een andere header te krijgen. Dit is niet goed gebouwd en daardoor raakt de screenreader van de leg.
+  <img src="readme-images/voiceassistant/1.jpg" width="375px" alt="Screenreader die in de war raakt van de titels">
+
+
+  2. De eerste kop is een kop niveau 3. Het zou semantisch beter gecodeert zijn als de eerste kop een H1 was geweest.
+  <img src="readme-images/voiceassistant/2.jpg" width="375px" alt="Het verkeerde header element is gebruikt">
+
+
+  3. Ik raak constant kwijt waar de screenreader op de pagina is. Dit is een indicatie dat de HTML niet juist/semantisch is gestructureerd. Hierdoor kunnen mensen die navigeren met screenreader niet fijn navigeren over de site.
+  <img src="readme-images/voiceassistant3.jpg" width="375px" alt="Screenreader die heel ergens anders op de pagina aan het lezen is dan waar ik op de pagina ben">
+
+
+  4. De titel die in de afbeelding te zien is zou in 1x moeten zeggen "PART OF OUR JOB IS TO FIND etc.". Daarintegen leest de screenreader elke keer maar 1 woord. Tevens spreekt de screenreader de woorden na FIND nieteens uit. 
+  <img src="readme-images/voiceassistant4.jpg" width="375px" alt="Screenreader die maar 1 woord van de hele zin voorleest">
+
+
+  5. Inhakend op punt 4. Het volgende wat de screenreader leest na punt 4 is een volgende titel, maar omdat deze niet netjes in de pagina is gezet (een beetje lui), begint de screenreader de hele zin in aparte hoofdletters op te lezen (als een soort alfabet).
+  <img src="readme-images/voiceassistant5.jpg" width="375px" alt="Screenreader die G E T I N T O U C H et cetera voorleest in plaats van de normale zin">
+
+
+  6. Linkjes staan in de website over het algemeen gewoon te vaag vermeld. De ene keer met nummers, de andere keer zonder tekst en dan weer met alleen een indicatie van een afbeelding... Als slechtziend persoon zou ik dit een feedback loop from hell hebben gevonden. 
+  <img src="readme-images/voiceassistant6.jpg" width="375px" alt="Slecht geneste linkjes">
+    <img src="readme-images/voiceassistant8.jpg" width="375px" alt="Nog een afbeelding met slecht geneste linkjes">
+
+
+
+  7. Bij het hoveren over de linkjes te zien in de afbeelding, komt er een bewegende animatie op de achtergrond die dan mooi met de muis meebeweegt. Net als meerdere van dit soort flashy animaties/video's/content, is dit nergens op de website uit te zetten voor gebruikers die niet tegen dit soort flashy content kunnen.
+  <img src="readme-images/voiceassistant7.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
+
+
+  8. De structuur van het menu begint prima, maar we kunnen het hamburger menu niet selecteren, waardoor navigeren over de website onmogelijk wordt gemaakt. Je zou nu dus eerst helemaal naar de footer moeten, om daar meer opties te krijgen (maar hoe weet een gebruiker dat dan?). Overall is het navigeren over de website ontzettend confusing en ik raak contant in de war over waar ik ben.
+  <img src="readme-images/voiceassistant9.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
+
+
+  ##### Conclustie
+  Navigeren over de website werd mij als screenreader-gebruiker eigelijk onmogelijk gemaakt. Als ik een doel had om naar heen te gaan, kostte het zoveel moeite dat ik niet anders kon dan begeleiden met scrollen en muisklikken, maar dat kan niet iedereen. Toegankelijkheid zou alleen op dit punt al falen, maar daarbij komt kijken dat heel de HTML structuur niet juist is > slechte linkjes, slechte headers en geen alt text maakt het voor screenreader-gebruikers helemaal niet duidelijk waar ze op de website zijn en wat voor content ze nou aan het lezen zijn.
+
 
 </details>
 
