@@ -67,29 +67,29 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
 
 
   3. Ik raak constant kwijt waar de screenreader op de pagina is. Dit is een indicatie dat de HTML niet juist/semantisch is gestructureerd. Hierdoor kunnen mensen die navigeren met screenreader niet fijn navigeren over de site.
-  <img src="readme-images/voiceassistant3.jpg" width="375px" alt="Screenreader die heel ergens anders op de pagina aan het lezen is dan waar ik op de pagina ben">
+  <img src="readme-images/voiceassistant/3.jpg" width="375px" alt="Screenreader die heel ergens anders op de pagina aan het lezen is dan waar ik op de pagina ben">
 
 
   4. De titel die in de afbeelding te zien is zou in 1x moeten zeggen "PART OF OUR JOB IS TO FIND etc.". Daarintegen leest de screenreader elke keer maar 1 woord. Tevens spreekt de screenreader de woorden na FIND nieteens uit. 
-  <img src="readme-images/voiceassistant4.jpg" width="375px" alt="Screenreader die maar 1 woord van de hele zin voorleest">
+  <img src="readme-images/voiceassistant/4.jpg" width="375px" alt="Screenreader die maar 1 woord van de hele zin voorleest">
 
 
   5. Inhakend op punt 4. Het volgende wat de screenreader leest na punt 4 is een volgende titel, maar omdat deze niet netjes in de pagina is gezet (een beetje lui), begint de screenreader de hele zin in aparte hoofdletters op te lezen (als een soort alfabet).
-  <img src="readme-images/voiceassistant5.jpg" width="375px" alt="Screenreader die G E T I N T O U C H et cetera voorleest in plaats van de normale zin">
+  <img src="readme-images/voiceassistant/5.jpg" width="375px" alt="Screenreader die G E T I N T O U C H et cetera voorleest in plaats van de normale zin">
 
 
   6. Linkjes staan in de website over het algemeen gewoon te vaag vermeld. De ene keer met nummers, de andere keer zonder tekst en dan weer met alleen een indicatie van een afbeelding... Als slechtziend persoon zou ik dit een feedback loop from hell hebben gevonden. 
-  <img src="readme-images/voiceassistant6.jpg" width="375px" alt="Slecht geneste linkjes">
-    <img src="readme-images/voiceassistant8.jpg" width="375px" alt="Nog een afbeelding met slecht geneste linkjes">
+  <img src="readme-images/voiceassistant/6.jpg" width="375px" alt="Slecht geneste linkjes">
+    <img src="readme-images/voiceassistant/8.jpg" width="375px" alt="Nog een afbeelding met slecht geneste linkjes">
 
 
 
   7. Bij het hoveren over de linkjes te zien in de afbeelding, komt er een bewegende animatie op de achtergrond die dan mooi met de muis meebeweegt. Net als meerdere van dit soort flashy animaties/video's/content, is dit nergens op de website uit te zetten voor gebruikers die niet tegen dit soort flashy content kunnen.
-  <img src="readme-images/voiceassistant7.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
+  <img src="readme-images/voiceassistant/7.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
 
 
   8. De structuur van het menu begint prima, maar we kunnen het hamburger menu niet selecteren, waardoor navigeren over de website onmogelijk wordt gemaakt. Je zou nu dus eerst helemaal naar de footer moeten, om daar meer opties te krijgen (maar hoe weet een gebruiker dat dan?). Overall is het navigeren over de website ontzettend confusing en ik raak contant in de war over waar ik ben.
-  <img src="readme-images/voiceassistant9.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
+  <img src="readme-images/voiceassistant/9.jpg" width="375px" alt="Afbeelding waar punt 7 visueel wordt onderbouwd">
 
 
   ##### Conclustie
