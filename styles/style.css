@@ -5,8 +5,32 @@
   box-sizing:border-box;  
 }
 
+/*********************/
+/* FONT FACES */
+/*********************/
 
+@font-face { /* For the buttons */
+	font-family: "MonumentExtended";
+	src: url('../fonts/MonumentExtended-Regular.woff2') format('woff2'),;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: uppercase;
+  }
 
+@font-face { /* For header */
+	font-family: "TWKEverett md";
+	src: url('../fonts/TWKEverett-Medium-web.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	text-transform: uppercase;
+  }
+
+@font-face { /* For body text */
+	font-family: "TWKEverett rg";
+	src: url('../fonts/TWKEverett-Regular-web.woff2') format('woff2'),;
+	font-weight: 400;
+	font-style: normal;
+  }
 
 
 
@@ -14,18 +38,67 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	/* Font families */
+	--ff-rg: 'TWKEverett rg', sans-serif;
+	--ff-md: 'TWKEverett md', sans-serif;
+	--ff-btn: 'MonumentExtended', sans-serif;
+
+	/* Font weights */
+	--fw-n: 400;
+	--fw-m: 600;
+	--fw-b: 800;
+	
+	/* Font sizes */
+	--fs-2: 5em;
+	--f3-3: 2em;
+	--fs-p: 1em;
+
+
+	/* Color scheme */
+	--primary-clr: #FF0101;
+	--sec-clr: #000;
+	--sec-clr-light: #282828;
+	--acent-clr: #433c3c;
+	--txt-clr: #FFF;
+
+	/* Spacers for margins, gaps or paddings */
+	--spacer: 1em;
+	--spacer-md: calc(var(--spacer) * 2);
+	--spacer-lg: calc(var(--spacer) * 3);
+
+	/* Borders */
+	--border-sm: 1px solid var(--acent-clr);
+	--border-md: calc(var(--border-sm) * 3) solid var(--acent-clr);
+	--border-lg: calc(var(--border-sm) * 5) solid var(--acent-clr);
+
+
+
+
 }
 
 
+/****************/
+/* MEDIA QUERIES */
+/****************/
 
+@media (prefers-color-scheme: dark) {
+	body {
+	  color: var(--txt-clr);
+	  background: var(--sec-clr);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+	  color: var(--sec-clr);
+	  background: var(--txt-clr);
+	}
+}
 
 
 /****************/
-/* JOUW STYLING */
+/* MY STYLING */
 /****************/
 
-/* jouw code */
+
 

@@ -1,13 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200">
-<style>
-	.blok{fill:url(#gradient);}	
-	.blokje{fill:none;stroke:#FFFFFF;stroke-width:18;stroke-miterlimit:10;}
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 118.65 163.53" style="enable-background:new 0 0 118.65 163.53;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
 </style>
-
-<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="200" y1="200" x2="0" y2="0">
-	<stop  offset="0" style="stop-color:#FF8C00"/>
-	<stop  offset="1" style="stop-color:#FF178F"/>
-</linearGradient>
-<rect x="0" y="0" width="200" height="200" class="blok"/>
-<rect x="60" y="60" width="80" height="80" class="blokje"/>
+<g>
+	<radialGradient id="SVGID_1_" cx="64.5961" cy="81.7629" r="69.3075" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.5744" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.7977" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</radialGradient>
+	<polygon class="st0" points="118.65,0 75.31,0 21.26,81.77 64.59,81.77 10.54,163.53 107.93,81.77 64.61,81.77 	"/>
+	<radialGradient id="SVGID_2_" cx="21.3873" cy="15.7215" r="18.7694" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.5744" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.7977" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</radialGradient>
+	<polygon class="st1" points="42.77,0 0,0 21.38,31.44 	"/>
+</g>
 </svg>
