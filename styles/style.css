@@ -5,6 +5,11 @@
   box-sizing:border-box;  
 }
 
+::selection {
+	color: var(--sec-clr);
+	background: var(--primary-clr);
+  }
+
 /*********************/
 /* FONT FACES */
 /*********************/
@@ -49,9 +54,14 @@
 	--fw-b: 800;
 	
 	/* Font sizes */
-	--fs-2: 5em;
-	--f3-3: 2em;
 	--fs-p: 1em;
+	--fs-1: calc(var(--fs-p) * 6);
+	--fs-2: calc(var(--fs-p) * 5);
+	--fs-3: calc(var(--fs-p) * 4);
+	--fs-4: calc(var(--fs-p) * 3);
+	--fs-5: calc(var(--fs-p) * 2);
+	--fs-6: calc(var(--fs-p) * 1.5);
+
 
 
 	/* Color scheme */
@@ -71,10 +81,47 @@
 	--border-md: calc(var(--border-sm) * 3) solid var(--acent-clr);
 	--border-lg: calc(var(--border-sm) * 5) solid var(--acent-clr);
 
-
-
-
 }
+
+/****************/
+/* Typography */
+/****************/
+h1, h2, h3, h4, h5, h6{
+	font-family: var(--ff-md);
+	color: var(--txt-clr);
+	text-transform: uppercase;
+}
+
+h1{
+	font-size: var(--fs-1);
+}
+
+h2{
+	font-size: var(--fs-2);
+}
+
+h3{
+	font-size: var(--fs-3);
+}
+
+h4{
+	font-size: var(--fs-4);
+}
+
+h5{
+	font-size: var(--fs-5);
+}
+
+h6{
+	font-size: var(--fs-6);
+}
+
+p{
+	font-family: var(--ff-rg);
+	color: var(--txt-clr);
+	font-size: var(--fs-p);
+}
+
 
 
 /****************/
@@ -99,6 +146,162 @@
 /****************/
 /* MY STYLING */
 /****************/
+
+
+/* BODY */
+
+body{
+	margin: 0;
+}
+
+
+/* HEADER */
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.3em 1em 0 0;
+	position: sticky;
+	top: 0em;
+}
+
+header img{
+	width: 2em;
+	height: auto;
+	margin: 1em;
+}
+
+header nav{
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--sec-clr);
+	/* translate: 100% 0%; */
+	transition: 0.3s;
+}
+
+header nav.showmenu {
+	translate: 0% 0%;  
+  }
+
+
+header button{
+	z-index: 100;
+	position: relative;
+	cursor: pointer;
+	background: none;
+	border: none;
+	height: 2em;
+	width: 5em;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transform: scaleX(-1);
+}
+
+header button:hover span:nth-of-type(1){
+	width: 40%;
+}
+
+header button:hover span:nth-of-type(2){
+	width: 60%;
+}
+
+
+header button span{
+	height: 1px;
+	width: 100%;
+	background: var(--txt-clr);
+}
+
+
+header button span:nth-of-type(1) {
+	transform-origin: 0% 0%;
+	transition: transform 0.4s ease-in-out;
+	transition: 0.3s;
+}
+  
+header button span:nth-of-type(2) {
+	transition: transform 0.2s ease-in-out;
+	transition: 0.3s;
+
+}
+  
+header button span:nth-of-type(3) {
+	transform-origin: 0% 100%;
+	transition: transform 0.4s ease-in-out;
+}
+
+
+.rotatemin{
+	transform:  rotate(-45deg);
+}
+
+.rotateplus{
+	transform:  rotate(45deg);
+}
+
+.leave{
+	transform:  scaleY(0);
+}
+
+
+header nav ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+header nav ul li{
+	margin-top: var(--spacer);
+}
+
+header nav ul li a{
+	color: var(--txt-clr);
+	font-family: var(--ff-md);
+	font-size: var(--fs-6);
+	text-decoration: none;
+	transition: 0.3s;
+	text-transform: uppercase;
+}
+
+header nav ul li a:hover{
+	color: var(--primary-clr);
+}
+
+header nav section{
+	margin: var(--spacer);
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+header nav section h2{
+	order: 3;
+}
+
+header nav section a{
+	text-decoration: none;
+	color: var(--txt-clr);
+	font-family: var(--ff-rg);
+	font-size: var(--fs-p);
+}
+
+header nav section section{
+	display: flex;
+	gap: var(--spacer);
+	flex-direction: row;
+}
+
+
 
 
 
