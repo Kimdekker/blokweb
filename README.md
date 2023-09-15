@@ -128,24 +128,37 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+    Veel gaat eigelijk heel goed. Zoals het maken van een fijne root, calc's includeren, dark en light modes, een fancy ::selection en al wat JavaScript. Kortom, ik vermaak me wel!
+  <img src="readme-images/light-dark.jpg" width="375px" alt="Code van light en darkmode">
+  <img src="readme-images/root.jpg" width="375px" alt="Root code">
+  <img src="readme-images/selection.jpg" width="375px" alt="::selection code">
+  <img src="readme-images/js.jpg" width="375px" alt="JavaScript code tot nu toe">
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  <img src="readme-images/vragen.jpg" width="375px" alt="De vragen die ik en mijn team hebben opgesteld voor het feedback gesprek">
+
+
+  | Kim                                                                                  | Valentijn          | Alia         | Ananda           |
+  | ---                                                                                  | ---                | ---          | ---              |
+  | Een icon is i, nest je daarin een a, of is het andersom                              | en dit             | en ik dit    | en dan ik dat    |
+  | Kan je een span binnen button gebruiken als de streepjes van het hamburger menu icon | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Hover hamburger menu met JS  .onclick blijft hoveren na click > moet niet > hoe?     | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Nog wat listjes toevoegen aan de stack met social media icons
+  - Van de article een Table of een List maken. Mag ik zelf weten
+  - Nog wat linkjes in het lijstje met "what we can do for you"
+  - Mannen waren tevreden en vonden dat ik al hele nette code aan het schrijven ben
+  - Heb wat advies gekregen over hoe ik mijn hamburger menu kan afmaken.
+  - Marquee gebruiken voor alle teksten die als een kermis atractie binnen komen rollen
+
+
 
 </details>
 

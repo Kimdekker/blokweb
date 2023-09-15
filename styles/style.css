@@ -23,7 +23,7 @@
   }
 
 @font-face { /* For header */
-	font-family: "TWKEverett md";
+	font-family: "TWKEverett";
 	src: url('../fonts/TWKEverett-Medium-web.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
@@ -31,7 +31,7 @@
   }
 
 @font-face { /* For body text */
-	font-family: "TWKEverett rg";
+font-family: "TWKEverett";
 	src: url('../fonts/TWKEverett-Regular-web.woff2') format('woff2'),;
 	font-weight: 400;
 	font-style: normal;
@@ -44,8 +44,7 @@
 /*********************/
 :root {
 	/* Font families */
-	--ff-rg: 'TWKEverett rg', sans-serif;
-	--ff-md: 'TWKEverett md', sans-serif;
+	--ff: 'TWKEverett rg', sans-serif;
 	--ff-btn: 'MonumentExtended', sans-serif;
 
 	/* Font weights */
