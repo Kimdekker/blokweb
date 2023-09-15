@@ -182,7 +182,7 @@ header nav{
 	left: 0;
 	right: 0;
 	background-color: var(--sec-clr);
-	/* translate: 100% 0%; */
+	translate: 100% 0%;
 	transition: 0.3s;
 }
 
