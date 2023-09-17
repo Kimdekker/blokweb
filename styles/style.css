@@ -51,7 +51,7 @@ font-family: "TWKEverett";
 	
 	/* Font sizes */
 	--fs-p: 1em;
-	--fs-1: calc(var(--fs-p) * 6);
+	--fs-1: calc(var(--fs-p) * 8);
 	--fs-2: calc(var(--fs-p) * 5);
 	--fs-3: calc(var(--fs-p) * 4);
 	--fs-4: calc(var(--fs-p) * 3);
@@ -407,5 +407,54 @@ header nav ul:last-of-type li a{
 	text-transform: capitalize;
 }
 
+
+
+/****************/
+/* ABOUT PAGE */
+/****************/
+
+
+/* FIRST SECTION */
+
+main section:first-of-type{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url(../images/fruitless.jpg);
+	clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);	
+	width: 100vw;
+	height: 80vh;
+}
+
+
+main section:first-of-type h1{
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+main section:first-of-type h2{
+	z-index: 100;
+	order: 1;
+	margin: 0em;
+	font-size: var(--fs-1);
+
+}
+
+main section:first-of-type h3{
+	z-index: 100;
+	margin: 0em;
+	font-size: var(--fs-6);
+	font-weight: var(--fw-n);
+}
+
+main section:first-of-type a{
+	order: 2;
+}
 
 
