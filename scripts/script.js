@@ -13,7 +13,7 @@ function foldMenu(){
 
   menuBtn.classList.toggle('showmenu');
   lineOne.classList.toggle('rotateplus');
-  lineTwo.classList.toggle('scaley');
+  lineTwo.classList.toggle('leave');
   lineThree.classList.toggle('rotatemin');
 }
 
