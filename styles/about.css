@@ -1,0 +1,518 @@
+/****************/
+/* ABOUT PAGE */
+/****************/
+
+
+/* FIRST SECTION */
+
+main section:first-of-type{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+	position: relative;
+}
+
+
+main section:first-of-type h1{
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+main section:first-of-type div{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+main section:first-of-type div button{
+	z-index: 100;
+	order: 1;
+	position: relative;
+	margin: 0em;
+	padding: 0em;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 1s;
+	overflow: hidden;
+	display: block;
+	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
+	transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	&::after {
+		content: "Play";
+		color: var(--primary-clr);
+		font-family: var(--ff);
+		font-size: var(--fs-1);
+		font-weight: var(--fw-b);
+		text-transform: uppercase;
+		transform: translateY(100%);
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		transition: inherit;
+	  }
+	  
+	  > span {
+		display: inline-block;
+		transform: translateY(0%);
+		transition: inherit;
+	  }
+	  
+	  &:hover {
+		> span {
+		  transform: translateY(-100%);
+		}
+		&::after {
+		  transform: translateY(0%);
+		}
+	  }
+
+	  &::after, span {
+		padding: .8em 2.3em;
+		min-width: 80px;
+	  }
+}
+
+
+main section:first-of-type div button span h2{
+	color: var(--primary-clr);
+	font-size: var(--fs-1);
+}
+
+
+main section:first-of-type h3{
+	z-index: 100;
+	margin: 0em;
+	font-size: var(--fs-6);
+	font-weight: var(--fw-n);
+	color: var(--primary-clr);
+	position: absolute;
+	top: 9em;
+}
+
+
+
+main section:first-of-type button{
+	order: 2;
+	border-radius: 20em;
+	border: var(--border-sm-red);
+	background: none;
+	padding: 5em 5.5em 5em 5.5em;
+	margin-top: 30em;
+}
+
+main section:first-of-type button i{
+	color: var(--primary-clr);
+	font-size: var(--fs-5);
+}
+
+
+main section:first-of-type img{
+	clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
+	width: 100vw;
+	height: 80vh;
+	transition: 0.3s;
+}
+
+main section:first-of-type img:hover{
+	clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
+}
+
+
+
+@media only screen and (max-width: 950px) {
+	main section:first-of-type{
+		background: var(--sec-clr);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/fruitless.jpg);
+		width: 100vw;
+		height: 90vh;
+		top: -5em;
+		
+	}
+
+	main section:first-of-type div button span h2{
+		font-size: var(--fs-2);
+	}
+
+	main section:first-of-type img{
+		clip-path: none;
+		display: none;
+	}	
+}
+
+
+@media only screen and (min-width: 950px) {
+	main section:first-of-type button{
+		display: none;
+	} 
+}
+
+
+
+
+
+/* SMALL INTEL SECTION */
+
+main ul:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0em var(--spacer-md);
+    padding: 0em;
+    gap: var(--spacer);
+}
+
+main ul:first-of-type li{
+    font-family: var(--ff);
+    color: var(--primary-clr);
+    font-size: calc(var(--fs-p) /1.3);
+    text-transform: uppercase;
+    width: 7em;
+}
+
+main ul:first-of-type li:nth-child(3){
+    width: 10em;
+}
+
+main ul:first-of-type li:nth-child(4){
+    color: var(--txt-clr);
+}
+
+
+main ul:first-of-type li span{
+    border: var(--border-sm-red);
+    width: 5px;
+    margin: 0 2em 0 -2em;
+}
+
+
+
+/* PART OF OUR JOB... */
+
+
+main section:nth-of-type(2){
+    margin: 20em 2em 0em 2em;
+}
+
+
+
+main section:nth-of-type(2) h2{
+    font-weight: var(--fw-n);
+    font-size: var(--fs-1);
+}
+
+
+main section:nth-of-type(2) h2 span{
+    font-size: 0.3em;
+    display: block;
+}
+
+
+@media only screen and (max-width: 1220px) {
+    main section:nth-of-type(2) h2{
+        font-size: var(--fs-2);
+    }
+
+    main section:nth-of-type(2) h2 span{
+        font-size: 0.3em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main section:nth-of-type(2){
+        margin: 10em 2em 0em 2em;
+    }
+
+    main section:nth-of-type(2) h2{
+        font-size: var(--fs-4);
+    }
+
+    main section:nth-of-type(2) h2 span{
+        font-size: 0.3em;
+    }
+}
+
+
+
+
+/* WHO ARE WE */
+
+main section:nth-of-type(3) h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+main section:nth-of-type(3){
+    column-count: 2;
+    margin: 0em 18vw 0em 2em;
+    column-gap: var(--spacer-md);
+    margin-top: calc(var(--spacer) * 20);
+}
+
+main section:nth-of-type(3) p{
+	font-size: calc(var(--fs-p) * 1.3);
+    line-height: var(--lh-md);
+    font-weight: var(--fw-n);
+    margin: 0em;
+}
+
+main section:nth-of-type(3) p span{
+    font-size: var(--fs-6);
+    text-transform: uppercase;
+    display: block;
+    margin: var(--spacer) 0em 10em 0em;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    main section:nth-of-type(3){
+        column-count: 2;
+        margin: 0em 2em 0em 2em;
+        column-gap: var(--spacer-md);
+    }
+
+    main section:nth-of-type(3) p span{
+        margin: var(--spacer) 0em 10em 0em;
+    }
+}
+
+
+@media only screen and (max-width: 740px) {
+    main section:nth-of-type(3){
+        column-count: 1;
+    }
+
+    main section:nth-of-type(3) p span{
+        margin: var(--spacer) 0em var(--spacer) 0em;
+    }
+
+}
+
+
+
+/* WHAT WE CAN DO FOR YOU */
+
+
+main section:nth-of-type(4){
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: calc(var(--spacer) * 20);
+}
+
+main section:nth-of-type(4) h2{
+    text-align: center;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-n);
+}
+
+main section:nth-of-type(4) ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section:nth-of-type(4) ul li, main section:nth-of-type(4) ul li:nth-of-type(3){
+    width: auto;
+}
+
+
+main section:nth-of-type(4) ul li a{
+    text-decoration: none;
+    font-size: var(--fs-2);
+    text-transform: uppercase;
+    color: var(--txt-clr);
+    font-weight: var(--fw-b);
+    line-height: var(--lh);
+}
+
+main section:nth-of-type(4) ul li:nth-of-type(5) a{
+    color: var(--primary-clr);
+}
+
+
+@media (prefers-reduced-motion:no-preference) {
+    main section:nth-of-type(4) ul li a {      
+      background-image:
+      linear-gradient(
+        to left,
+        var(--txt-clr) 50%,
+        var(--primary-clr) 50%
+      );
+      background-size: 200% 100%;
+  
+      background-position:right bottom;
+  
+      -webkit-background-clip:text;
+      background-clip:text;
+  
+      color:transparent;
+      
+      transition:
+        clip-path .5s,
+        background-position 1s;
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover {
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position:left bottom;
+      }
+  }
+
+@media only screen and (max-width: 880px) {
+    main section:nth-of-type(4) ul li a{
+        font-size: var(--fs-3);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover {
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position:left bottom;
+      }
+}
+
+@media only screen and (max-width: 720px) {
+    main section:nth-of-type(4) ul li a{
+        font-size: var(--fs-4);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover {
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position:left bottom;
+      }
+}
+
+@media only screen and (max-width: 550px) {
+    main section:nth-of-type(4) ul li a{
+        font-size: var(--fs-5);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover {
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position:left bottom;
+      }
+}
+
+@media only screen and (max-width: 385px) {
+    main section:nth-of-type(4) ul li a{
+        font-size: var(--fs-6);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a{
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover {
+        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position:left bottom;
+      }
+}
+
+
+
+
+
+/* LOGO'S > OUR PARTNERS*/
+
+main section:nth-of-type(5){
+    margin: calc(var(--spacer) * 20) 6em 0 6em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 4em;
+}
+
+
+main section:nth-of-type(5) h2{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main section:nth-of-type(5) img{
+    width: 4em;
+    opacity: 50%;
+}
+
+
+@media only screen and (max-width: 700px) {
+    main section:nth-of-type(5){
+        margin: calc(var(--spacer) * 20) 2em 0 2em;
+    }
+}

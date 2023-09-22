@@ -58,6 +58,9 @@ font-family: "TWKEverett";
 	--fs-5: calc(var(--fs-p) * 2);
 	--fs-6: calc(var(--fs-p) * 1.5);
 
+	/* Line height */
+	--lh: 1em;
+	--lh-md: 1.6em;
 
 
 	/* Color scheme */
@@ -136,12 +139,12 @@ p{
 	}
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	body {
 	  color: var(--sec-clr);
 	  background: var(--txt-clr);
 	}
-}
+} */
 
 
 /****************/
@@ -185,6 +188,7 @@ body::before{
 	background-repeat: repeat;
 	animation: noise 12s steps(10) infinite;
 	overflow: hidden;
+	z-index: -1;
 }
 
 body::-webkit-scrollbar {
@@ -410,162 +414,7 @@ header nav ul:last-of-type li a{
 
 
 
-/****************/
-/* ABOUT PAGE */
-/****************/
 
-
-/* FIRST SECTION */
-
-main section:first-of-type{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;	
-	position: relative;
-}
-
-
-main section:first-of-type h1{
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
-main section:first-of-type div{
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-main section:first-of-type div button{
-	z-index: 100;
-	order: 1;
-	position: relative;
-	margin: 0em;
-	padding: 0em;
-	background: none;
-	border: none;
-	cursor: pointer;
-	transition: transform 1s;
-	overflow: hidden;
-	display: block;
-	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
-	transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
-	&::after {
-		content: "Play";
-		color: var(--primary-clr);
-		font-family: var(--ff);
-		font-size: var(--fs-1);
-		font-weight: var(--fw-b);
-		text-transform: uppercase;
-		transform: translateY(100%);
-		display: inline-block;
-		position: absolute;
-		left: 0;
-		transition: inherit;
-	  }
-	  
-	  > span {
-		display: inline-block;
-		transform: translateY(0%);
-		transition: inherit;
-	  }
-	  
-	  &:hover {
-		> span {
-		  transform: translateY(-100%);
-		}
-		&::after {
-		  transform: translateY(0%);
-		}
-	  }
-
-	  &::after, span {
-		padding: .8em 2.3em;
-		min-width: 80px;
-	  }
-}
-
-
-main section:first-of-type div button span h2{
-	color: var(--primary-clr);
-	font-size: var(--fs-1);
-}
-
-
-main section:first-of-type h3{
-	z-index: 100;
-	margin: 0em;
-	font-size: var(--fs-6);
-	font-weight: var(--fw-n);
-	color: var(--primary-clr);
-	position: absolute;
-	top: 9em;
-}
-
-
-
-main section:first-of-type button{
-	order: 2;
-	border-radius: 20em;
-	border: var(--border-sm-red);
-	background: none;
-	padding: 5em 5.5em 5em 5.5em;
-	margin-top: 30em;
-}
-
-main section:first-of-type button i{
-	color: var(--primary-clr);
-	font-size: var(--fs-5);
-}
-
-
-main section:first-of-type img{
-	clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
-	width: 100vw;
-	height: 80vh;
-	transition: 0.3s;
-}
-
-main section:first-of-type img:hover{
-	clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
-}
-
-
-
-@media only screen and (max-width: 950px) {
-	main section:first-of-type{
-		background: var(--sec-clr);
-		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/fruitless.jpg);
-		width: 100vw;
-		height: 90vh;
-		top: -5em;
-		
-	}
-
-	main section:first-of-type div button span h2{
-		font-size: var(--fs-2);
-	}
-
-	main section:first-of-type img{
-		clip-path: none;
-		display: none;
-	}	
-}
-
-
-@media only screen and (min-width: 950px) {
-	main section:first-of-type button{
-		display: none;
-	} 
-}
 
 
 
