@@ -31,7 +31,7 @@
 			<li><a href="#" alt="Go to our contact page">Contact</a></li>
 		</ul>
 		<section>
-			<marquee><h2>Get in touch with Yeti</h2></marquee>
+			<marquee scrollamount="1" scrolldelay="2" truespeed="truespeed"><h2>Get in touch with Yeti</h2></marquee>
 			<a href="tel:+30 210 6549540">+30 210 6549540</a>
 			<section>
 				<ul>
@@ -54,7 +54,8 @@
 
 <main>
 	<section>
-		<h1>About Yeti</h1>
+		<!-- Header H1 is properly hidden, but seen for screenreaders-->
+		<h1>About Yeti</h1> 
 		<div>
 			<button alt="Play the video">
 				<span><h2>We are Yeti</h2></span>
@@ -88,6 +89,7 @@
 
 
 	<section>
+		<!-- Header H2 is properly hidden, but seen for screenreaders-->
 		<h2>What we can do for you</h2>
 		<ul>
 			<li><a href="#">TV commercials</a></li>
@@ -100,6 +102,7 @@
 
 
 	<section>
+		<!-- Header H1 is properly hidden, but seen for screenreaders-->
 		<h2>Our partners</h2>
 		<img src="../Yetimotion/images/logos/alpha.svg" alt="The logo of Alpha">
 		<img src="../Yetimotion/images/logos/amazon.svg" alt="The logo of Amazon">
@@ -130,8 +133,12 @@
 
 	<section>
 		<h2>Latest awards</h2>
-		<button>Awards</button>
-		<button>Honors</button>
+		<form>
+		    <input type="radio" id="awards" name="latest_awards" value="Awards">
+		    <label for="awards">Awards</label>
+		    <input type="radio" id="honors" name="latest_awards" value="Honors">
+		    <label for="honors">Honors</label>
+		  </form>
 
 		<table>
 			<h2>Fruitless</h2>
@@ -139,59 +146,59 @@
 			<p>2021</p>
 		</table>
 
-		<ul>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</ul>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
-		<article>
+		<table>
 			<h2>Fruitless</h2>
 			<h3>Motiongrapher</h3>
 			<p>2021</p>
-		</article>
+		</table>
 
 		<button>Load more</button>
 	</section>

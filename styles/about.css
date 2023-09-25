@@ -190,8 +190,11 @@ main ul:first-of-type li:nth-child(4){
 
 main ul:first-of-type li span{
     border: var(--border-sm-red);
-    width: 5px;
     margin: 0 2em 0 -2em;
+}
+
+main ul:first-of-type li:last-of-type span{
+    border-color: var(--txt-clr);
 }
 
 
@@ -516,3 +519,49 @@ main section:nth-of-type(5) img{
         margin: calc(var(--spacer) * 20) 2em 0 2em;
     }
 }
+
+
+
+
+/* LATEST AWARDS */
+
+
+section:nth-of-type(6) form label{
+    font-family: var(--ff-btn);
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: var(--spacer-md);
+    border: var(--border-sm);
+
+    /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
+    --b: 1px;   /* thickness of the corner button */
+    --w: 20px;  /* width of corner button */
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #0000 90deg,var(--txt-clr) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+      transition: 0.5s;
+}
+
+
+section:nth-of-type(6) form label:hover{
+    padding: calc(var(--spacer-md) * 0.8);
+}
+
+section:nth-of-type(6) form input[type="radio"] {
+    left: -999em;
+    position: absolute;
+}
+
+
+
+
+
+/* section:nth-of-type(6) form label:checked{
+    opacity: 1;
+} */
+
