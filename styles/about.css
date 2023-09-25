@@ -317,6 +317,8 @@ main section:nth-of-type(4){
     justify-content: center;
     flex-direction: column;
     margin-top: calc(var(--spacer) * 20);
+    position: relative;
+    opacity: 0;
 }
 
 main section:nth-of-type(4) h2{
@@ -484,7 +486,25 @@ main section:nth-of-type(4) ul li:nth-of-type(5) a{
 }
 
 
+main section:nth-of-type(4).active {
+    opacity: 1;
+  }
+  .active main section:nth-of-type(4){
+    animation: fade-bottom 1s ease-in;
+  }
 
+  
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
 
 
 /* LOGO'S > OUR PARTNERS*/
@@ -525,19 +545,42 @@ main section:nth-of-type(5) img{
 
 /* LATEST AWARDS */
 
+section:nth-of-type(6){
+    margin: calc(var(--spacer) * 20) var(--spacer) 0em var(--spacer);
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+section:nth-of-type(6) > h2{
+    color: var(--primary-clr);
+    font-size: var(--fs-1);
+    margin: 0em;
+    grid-column-start: 1;
+}
+
+
+section:nth-of-type(6) form{
+    grid-column-start: 2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
 
 section:nth-of-type(6) form label{
     font-family: var(--ff-btn);
     text-transform: uppercase;
     cursor: pointer;
-    padding: var(--spacer-md);
+    padding: var(--spacer-md) var(--spacer-lg);
     border: var(--border-sm);
+    margin: var(--spacer);
+    opacity: 0.4;
 
     /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
     --b: 1px;   /* thickness of the corner button */
-    --w: 20px;  /* width of corner button */
+    --w: 10px;  /* width of corner button */
     border: var(--b) solid #0000; /* space for the border */
-    --_g: #0000 90deg,var(--txt-clr) 0;
+    --_g: #000 0 90deg,var(--txt-clr) 0;
     --_p: var(--w) var(--w) border-box no-repeat;
     background:
       conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
@@ -548,8 +591,10 @@ section:nth-of-type(6) form label{
 }
 
 
+
 section:nth-of-type(6) form label:hover{
-    padding: calc(var(--spacer-md) * 0.8);
+    padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
+    margin: calc(var(--spacer-md) * 0.5) calc(var(--spacer-lg) * 0.5);
 }
 
 section:nth-of-type(6) form input[type="radio"] {
@@ -557,6 +602,35 @@ section:nth-of-type(6) form input[type="radio"] {
     position: absolute;
 }
 
+
+
+section:nth-of-type(6) form input:checked + label{
+    color: var(--txt-clr);
+    opacity: 1;
+}
+
+section:nth-of-type(6) div{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+section:nth-of-type(6) div table{
+    font-family: var(--ff);
+    margin-top: var(--spacer-lg);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+section:nth-of-type(6) div table tr{
+    border-top: var(--border-sm);
+    padding: 10em;
+}
+
+
+section:nth-of-type(6) button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 
 
 
