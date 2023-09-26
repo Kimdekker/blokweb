@@ -198,6 +198,17 @@ main ul:first-of-type li:last-of-type span{
 }
 
 
+@media only screen and (max-width: 600px) {
+    main ul:first-of-type{
+        display: none;
+    }
+
+    main section:nth-of-type(2){
+        margin: 10em 2em 0em 2em;
+    }
+}
+
+
 
 /* PART OF OUR JOB... */
 
@@ -205,6 +216,8 @@ main ul:first-of-type li:last-of-type span{
 main section:nth-of-type(2){
     margin: 20em 2em 0em 2em;
 }
+
+
 
 
 
@@ -318,7 +331,7 @@ main section:nth-of-type(4){
     flex-direction: column;
     margin-top: calc(var(--spacer) * 20);
     position: relative;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 main section:nth-of-type(4) h2{
@@ -486,7 +499,7 @@ main section:nth-of-type(4) ul li:nth-of-type(5) a{
 }
 
 
-main section:nth-of-type(4).active {
+/* main section:nth-of-type(4).active {
     opacity: 1;
   }
   .active main section:nth-of-type(4){
@@ -503,7 +516,7 @@ main section:nth-of-type(4).active {
       transform: translateY(0);
       opacity: 1;
     }
-  }
+  } */
   
 
 
@@ -538,6 +551,10 @@ main section:nth-of-type(5) img{
     main section:nth-of-type(5){
         margin: calc(var(--spacer) * 20) 2em 0 2em;
     }
+
+    main section:nth-of-type(5) img{
+        width: 3.5em;
+    }
 }
 
 
@@ -546,9 +563,10 @@ main section:nth-of-type(5) img{
 /* LATEST AWARDS */
 
 section:nth-of-type(6){
-    margin: calc(var(--spacer) * 20) var(--spacer) 0em var(--spacer);
+    margin: calc(var(--spacer) * 20) var(--spacer-lg) 0em var(--spacer-lg);
     display: grid;
     grid-template-columns: 60% 40%;
+    position: relative;
 }
 
 section:nth-of-type(6) > h2{
@@ -572,7 +590,6 @@ section:nth-of-type(6) form label{
     text-transform: uppercase;
     cursor: pointer;
     padding: var(--spacer-md) var(--spacer-lg);
-    border: var(--border-sm);
     margin: var(--spacer);
     opacity: 0.4;
 
@@ -614,6 +631,7 @@ section:nth-of-type(6) div{
     grid-column-end: 3;
 }
 
+
 section:nth-of-type(6) div table{
     font-family: var(--ff);
     margin-top: var(--spacer-lg);
@@ -623,19 +641,173 @@ section:nth-of-type(6) div table{
 
 section:nth-of-type(6) div table tr{
     border-top: var(--border-sm);
-    padding: 10em;
+    cursor: pointer;
+    background-image: none;
+    transition: background-image 1s;
 }
+
+section:nth-of-type(6) div table tr:hover{
+    background-image: url(../images/fruitless.jpg);
+}
+
+
+section:nth-of-type(6) div table tr:hover td:not(:last-child){
+    color: var(--primary-clr);
+}
+
+section:nth-of-type(6) div table tr td:first-of-type{
+    width: 30%;
+}
+
+section:nth-of-type(6) div table tr td:last-of-type{
+    text-align: end;
+}
+
+
+section:nth-of-type(6) div table tr td{
+    padding: calc(var(--spacer) * 0.7) 0em;
+}
+
+section:nth-of-type(6) div table tr td:first-of-type{
+    font-size: calc(var(--fs-p) * 0.7);   
+    text-transform: uppercase;
+}
+
+section:nth-of-type(6) div table tr td:first-of-type::before{
+    content: 'X ';
+    margin-right: var(--spacer);
+    opacity: 0.4;
+}
+
+
+section:nth-of-type(6) div table tr td:nth-of-type(2){
+    font-size: calc(var(--fs-p) * 1.2);
+}
+
+
+section:nth-of-type(6) div table tr td:last-of-type{
+    font-size: calc(var(--fs-5) * 1.2);
+}
+
 
 
 section:nth-of-type(6) button{
     grid-column-start: 1;
     grid-column-end: 3;
+    color: var(--txt-clr);
+    position: absolute;
+    bottom: -10em;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: var(--spacer-lg);
+
+    font-family: var(--ff-btn);
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: var(--spacer-md) var(--spacer-lg);
+    margin: var(--spacer);
+    opacity: 0.4;
+
+     /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
+    --b: 1px;   /* thickness of the corner button */
+    --w: 10px;  /* width of corner button */
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #000 0 90deg,var(--txt-clr) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+      transition: 0.5s;
+}
+
+
+
+section:nth-of-type(6) button:hover{
+    padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
+    opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+    section:nth-of-type(6) form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: var(--spacer-md);
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    section:nth-of-type(6) div table tr td:first-of-type{
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    section:nth-of-type(6) > h2{
+        font-size: var(--fs-3);
+    }
+
+    section:nth-of-type(6) div table tr td:first-of-type{
+        width: 35%;
+    }
+
+    section:nth-of-type(6) div table tr td:last-of-type{
+        font-size: calc(var(--fs-5) * 0.8);
+    }
+
+    section:nth-of-type(6) form label{
+        padding: var(--spacer) var(--spacer-md);
+        margin: var(--spacer) var(--spacer) var(--spacer) 0em;
+    }
+
+    section:nth-of-type(6){
+        margin: calc(var(--spacer) * 20) var(--spacer) 0em var(--spacer);
+    }
+
+}
+
+
+@media only screen and (max-width: 630px) {
+    section:nth-of-type(6) div table tr td:first-of-type{
+        display: none;
+    }
+
+    section:nth-of-type(6) div table tr td:nth-of-type(2){
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 536px) {
+    section:nth-of-type(6) button{
+        left: 0;
+        right: 0;
+        margin-left: 0em;
+        transform: none;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    section:nth-of-type(6) form label{
+        font-size: calc(var(--fs-p) * 0.8);
+    }
 }
 
 
 
 
-/* section:nth-of-type(6) form label:checked{
-    opacity: 1;
-} */
 
+/* .award,
+.honor {
+  display: table-row;
+}
+
+.hidden {
+  display: none;
+} */

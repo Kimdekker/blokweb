@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/c215f50311.js" crossorigin="anonymous"></script>	<title>About - Yeti</title>
+	<script src="https://kit.fontawesome.com/c215f50311.js" crossorigin="anonymous"></script>
+
+	<title>About - Yeti</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/about.css" rel="stylesheet">
@@ -14,9 +16,15 @@
 </head>
 
 <body>
+<!-- bron: https://jsfiddle.net/ydchauh/4cbk0sq5/ -->
+<div class='cursor' id="cursor"></div>
 
 <header>
-	<img src="../Yetimotion/images/favicon.svg">
+	<img href="#" alt="Go to homepage" src="images/favicon.svg">
+	<ul>
+		<li><a href="#" alt="Go to our Portfolio">Portfolio</a></li>
+		<li><a href="#" alt="Go to the showreel page">Showreel</a></li>
+	</ul>
 	<button>    
 		<span></span>
 		<span></span>
@@ -133,62 +141,73 @@
 	<section>
 		<h2>Latest awards</h2>
 		<form>
-		    <input type="radio" id="awards" name="latest_awards" value="Awards">
+		    <input type="radio" id="awards" name="latest_awards" value=".award" checked="checked">
 		    <label for="awards">Awards</label>
-		    <input type="radio" id="honors" name="latest_awards" value="Honors">
+		    <input type="radio" id="honors" name="latest_awards" value=".honor">
 		    <label for="honors">Honors</label>
 		  </form>
 
 		<div>
 			<table>
-				<tr>
-					<td>Fruitless</td>
+				<tr class="award">
 					<td>Motiongrapher</td>
+					<td>Fruitless</td>
 					<td>2021</td>
 				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
-
-				<tr>
-					<td><h2>Fruitless</h2></td>
-					<td><h3>Motiongrapher</h3></td>
-					<td><p>2021</p></td>
-				</tr>
 				
+				<tr class="award">
+					<td>Motiongrapher</td>
+					<td>Ma(d)chines</td>
+					<td>2020</td>
+				</tr>
+
+				<tr class="award">
+					<td>EBGE</td>
+					<td>Skai Idents</td>
+					<td>2019</td>
+				</tr>
+
+				<tr class="award">
+					<td>EBGE award</td>
+					<td>Ma(d)chines</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>EBGE merit</td>
+					<td>Milko</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>EBGE merit</td>
+					<td>Kean Orange</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>EBGE merit</td>
+					<td>Kean Love</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>Finalist Motiongrapher awards</td>
+					<td>Ma(d)chines</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>Motion served gallery Behance</td>
+					<td>Night Run</td>
+					<td>2018</td>
+				</tr>
+
+				<tr class="honor">
+					<td>EBGE merit</td>
+					<td>Kean Fruit</td>
+					<td>2018</td>
+				</tr>
 			</table>
 
 		</div>
@@ -222,6 +241,8 @@
 	
 
 <script src="scripts/script.js"></script>
+
+
 </body>
 	
 </html>

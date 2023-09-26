@@ -168,6 +168,26 @@ p{
 /* MY STYLING */
 /****************/
 
+/* MOUSE */
+
+/* bron: https://jsfiddle.net/ydchauh/4cbk0sq5/ */
+
+.cursor {
+	position: fixed;
+	border-radius: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%;
+	mix-blend-mode: difference;
+	background-color: transparent;
+	z-index: 99999;
+	border: var(--border-sm-red);
+	height: 5em;
+	width: 5em;
+	transition: all 300ms ease-out;
+  }
+
 
 /* BODY */
 
@@ -175,21 +195,23 @@ body{
 	margin: 0em;
 }
 
-body::before{
-	content: ' ';
-	display: block;
-	position: fixed;
-	left: -50%;
-	top: -50%;
-	width: 200vw;
-	height: 200vh;
-	opacity: 0.3;
-	background-image: url(../images/noise.png);
-	background-repeat: repeat;
-	animation: noise 12s steps(10) infinite;
-	overflow: hidden;
-	z-index: -1;
-}
+@media (prefers-reduced-motion:no-preference) {
+	body::before{
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: -50%;
+		top: -50%;
+		width: 200vw;
+		height: 200vh;
+		opacity: 0.3;
+		background-image: url(../images/noise.png);
+		background-repeat: repeat;
+		animation: noise 12s steps(10) infinite;
+		overflow: hidden;
+		z-index: -100;
+	}
+  }
 
 body::-webkit-scrollbar {
     width: 0.2em;
@@ -211,14 +233,43 @@ header{
 	padding: 0.3em 1em 0 0;
 	position: sticky;
 	top: 0em;
-	z-index:9999999;
+	z-index:10000;
 }
 
 header img{
 	width: 2em;
 	height: auto;
 	margin: 1em;
+	margin-right: auto;
 }
+
+header > ul:first-of-type{
+	display: flex;
+	justify-content: end;
+	list-style-type: none;
+	gap: var(--spacer-lg);
+	margin-right: var(--spacer-lg);
+}
+
+header > ul:first-of-type li a{
+	font-family: var(--ff-btn);
+	color: var(--txt-clr);
+	font-size: calc(var(--fs-p) * 0.8);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+header > ul:first-of-type li a:hover{
+	color: var(--primary-clr);
+}
+
+
+@media only screen and (max-width: 600px) {
+	header > ul:first-of-type{
+		display: none;
+	}
+  }
 
 header nav{
 	display: flex;
@@ -234,20 +285,23 @@ header nav{
 	transition: 0.3s;
 }
 
-header nav.showmenu::before{
-	content: ' ';
-	display: block;
-	position: fixed;
-	left: -50%;
-	top: -50%;
-	width: 200vw;
-	height: 200vh;
-	opacity: 0.3;
-	background-image: url(../images/noise.png);
-	background-repeat: repeat;
-	animation: noise 12s steps(10) infinite;
-	overflow: hidden;
-	z-index: -1;
+
+@media (prefers-reduced-motion:no-preference) {
+	header nav.showmenu::before{
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: -50%;
+		top: -50%;
+		width: 200vw;
+		height: 200vh;
+		opacity: 0.3;
+		background-image: url(../images/noise.png);
+		background-repeat: repeat;
+		animation: noise 12s steps(10) infinite;
+		overflow: hidden;
+		z-index: -1;
+	}
 }
 
 header nav.showmenu {
@@ -386,21 +440,43 @@ header nav section{
 	margin: 0em;
 }
 
-header nav section marquee{
-	order: 4;
-}
-
-marquee h2{
+header nav section h2{
 	color: var(--primary-clr);
-	font-size: var(--fs-1);
-	margin: 0.2em 0em 0.2em 0em;
+	margin: 0.2em 0em 0.2em 0.3em;
 }
 
-@media only screen and (max-width: 600px) {
-	marquee h2{
+@media only screen and (max-width: 1100px) {
+	header nav section h2{
 		font-size: var(--fs-4);
+		margin: 0.2em 0em 0.2em 0.8em;
 	}	
-  }
+}
+
+@media only screen and (max-width: 700px) {
+	header nav section h2{
+		font-size: var(--fs-6);
+		margin: 0.2em 0em 0.2em 1.8em;
+	}	
+}
+
+
+@media (prefers-reduced-motion:no-preference) {
+	header nav section marquee{
+		order: 4;
+	}
+	
+	marquee h2{
+		color: var(--primary-clr);
+		font-size: var(--fs-1);
+		margin: 0.2em 0em 0.2em 0em;
+	}
+	
+	@media only screen and (max-width: 600px) {
+		marquee h2{
+			font-size: var(--fs-4);
+		}	
+	}
+}
 
 
 header nav section a{
