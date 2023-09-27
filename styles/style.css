@@ -128,9 +128,9 @@ p{
 
 
 
-/****************/
+/**********************************/
 /* MEDIA QUERIES DARK/LIGHT THEMES*/
-/****************/
+/**********************************/
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -139,12 +139,6 @@ p{
 	}
 }
 
-/* @media (prefers-color-scheme: light) {
-	body {
-	  color: var(--sec-clr);
-	  background: var(--txt-clr);
-	}
-} */
 
 
 /****************/
@@ -260,7 +254,7 @@ header > ul:first-of-type li a{
 	transition: 0.5s;
 }
 
-header > ul:first-of-type li a:hover{
+header > ul:first-of-type li a:hover, header > ul:first-of-type li a:focus{
 	color: var(--primary-clr);
 }
 
@@ -326,23 +320,23 @@ header button{
 
 
 /* Class added = rotateplus  > See script.JS function rule 8/18*/
-header button:hover span:nth-of-type(1){
+header button:hover span:nth-of-type(1), header button:focus span:nth-of-type(1){
 	width: 40%;
 }
 
 /* Class added = leave  > See script.JS function rule 8/18*/
-header button:hover span:nth-of-type(2){
+header button:hover span:nth-of-type(2), header button:focus span:nth-of-type(2){
 	width: 60%;
 }
 
 
 /* When class is added (with the JS), dont change the :hover widht anymore */
-header button:hover span:nth-of-type(1).rotateplus{
+header button:hover span:nth-of-type(1).rotateplus, header button:focus span:nth-of-type(1).rotateplus{
 	width: 2.7em;
 }
 
 /* When class is added (with the JS), dont change the :hover widht anymore */
-header button:hover span:nth-of-type(2).leave{
+header button:hover span:nth-of-type(2).leave, header button:focus span:nth-of-type(2).leave{
 	width: 0%;
 }
 
@@ -428,7 +422,7 @@ header nav ul li a{
 	text-transform: uppercase;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover, header nav ul li a:focus{
 	color: var(--primary-clr);
 }
 
@@ -506,7 +500,7 @@ i{
 	font-size: var(--fs-6);
 }
 
-i:hover{
+i:hover, i:focus{
 	color: var(--primary-clr);
 }
 
@@ -525,8 +519,123 @@ header nav ul:last-of-type li a{
 
 
 
+/* FOOTER */
+
+footer{
+	margin-top: calc(var(--spacer) * 20);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer div button h2{
+	color: var(--primary-clr);
+}
 
 
+footer div button{
+	z-index: 100;
+	order: 1;
+	position: relative;
+	margin: 0em;
+	padding: 0em;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 1s;
+	overflow: hidden;
+	display: block;
+	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
+	transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	&::after {
+		content: "Contact us";
+		color: var(--primary-clr);
+		font-family: var(--ff);
+		font-size: var(--fs-2);
+		font-weight: var(--fw-b);
+		text-transform: uppercase;
+		transform: translateY(100%);
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		transition: inherit;
+	  }
+	  
+	  > span {
+		display: inline-block;
+		transform: translateY(0%);
+		transition: inherit;
+	  }
+	  
+	  &:hover, &:focus {
+		> span {
+		  transform: translateY(-100%);
+		}
+		&::after {
+		  transform: translateY(0%);
+		}
+	  }
+
+	  &::after, span {
+		padding: .8em 3.85em;
+		min-width: 80px;
+	  }
+}
 
 
+footer section:first-of-type ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	gap: var(--spacer-lg);
+	margin: 0em;
+	padding: 0em;
+}
 
+footer address{
+	width: 100%;
+	margin: var(--spacer) 0em;
+}
+
+footer address marquee{
+	width: 100%;
+}
+
+footer address marquee ul{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	gap: var(--spacer-lg);
+}
+
+footer address marquee ul li a{
+	text-decoration: none;
+	color: var(--txt-clr);
+	font-family: var(--ff);
+	font-size: var(--fs-6);
+	font-style: normal;
+	font-weight: var(--fw-n);
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+
+
+footer address marquee ul li a:hover, footer address marquee ul li a:focus{
+	color: var(--primary-clr);
+}
+
+
+footer section:last-of-type p{
+	text-transform: uppercase;
+	margin: var(--spacer);
+	font-size: calc(var(--fs-p) * 0.8);
+	opacity: 0.6;
+}
+
+
+@media only screen and (max-width: 610px) {
+	footer div button span h2{
+		font-size: var(--fs-4);
+	}
+}
