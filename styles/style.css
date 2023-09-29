@@ -1,38 +1,43 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 ::selection {
 	color: var(--sec-clr);
 	background: var(--primary-clr);
-  }
+}
 
 /*********************/
 /* FONT FACES */
 /*********************/
 
-@font-face { /* For the buttons */
+@font-face {
+	/* For the buttons */
 	font-family: "MonumentExtended";
-	src: url('../fonts/MonumentExtended-Regular.woff2') format('woff2'),;
+	src: url('../fonts/MonumentExtended-Regular.woff2') format('woff2'), ;
 	font-weight: 400;
 	font-style: normal;
 	text-transform: uppercase;
-  }
+}
 
-@font-face { /* For header */
+@font-face {
+	/* For header */
 	font-family: "TWKEverett";
 	src: url('../fonts/TWKEverett-Medium-web.woff2') format('woff2');
 	font-weight: 600;
-  }
+}
 
-@font-face { /* For body text */
-font-family: "TWKEverett";
-	src: url('../fonts/TWKEverett-Regular-web.woff2') format('woff2'),;
+@font-face {
+	/* For body text */
+	font-family: "TWKEverett";
+	src: url('../fonts/TWKEverett-Regular-web.woff2') format('woff2'), ;
 	font-weight: 400;
-  }
+}
 
 
 
@@ -48,7 +53,7 @@ font-family: "TWKEverett";
 	--fw-n: 400;
 	--fw-m: 600;
 	--fw-b: 800;
-	
+
 	/* Font sizes */
 	--fs-p: 1em;
 	--fs-1: calc(var(--fs-p) * 8);
@@ -89,37 +94,42 @@ font-family: "TWKEverett";
 /****************/
 /* Typography */
 /****************/
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--ff);
 	color: var(--txt-clr);
 	text-transform: uppercase;
 }
 
-h1{
+h1 {
 	font-size: var(--fs-1);
 }
 
-h2{
+h2 {
 	font-size: var(--fs-2);
 }
 
-h3{
+h3 {
 	font-size: var(--fs-3);
 }
 
-h4{
+h4 {
 	font-size: var(--fs-4);
 }
 
-h5{
+h5 {
 	font-size: var(--fs-5);
 }
 
-h6{
+h6 {
 	font-size: var(--fs-6);
 }
 
-p{
+p {
 	font-family: var(--ff);
 	color: var(--txt-clr);
 	font-size: var(--fs-p);
@@ -134,8 +144,8 @@ p{
 
 @media (prefers-color-scheme: dark) {
 	body {
-	  color: var(--txt-clr);
-	  background: var(--sec-clr);
+		color: var(--txt-clr);
+		background: var(--sec-clr);
 	}
 }
 
@@ -147,12 +157,31 @@ p{
 
 
 @keyframes noise {
-	0%, 100% {transform: translate(0, 0);}
-	10% {transform: translate(-5%, -10%);}
-	30% {transform: translate(3%, -15%);}
-	50% {transform: translate(12%, 9%);}
-	70% {transform: translate(9%, 4%);}
-	90% {transform: translate(-1%, -7%);}
+
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+
+	10% {
+		transform: translate(-5%, -10%);
+	}
+
+	30% {
+		transform: translate(3%, -15%);
+	}
+
+	50% {
+		transform: translate(12%, 9%);
+	}
+
+	70% {
+		transform: translate(9%, 4%);
+	}
+
+	90% {
+		transform: translate(-1%, -7%);
+	}
 }
 
 
@@ -180,17 +209,17 @@ p{
 	height: 5em;
 	width: 5em;
 	transition: all 300ms ease-out;
-  }
+}
 
 
 /* BODY */
 
-body{
+body {
 	margin: 0em;
 }
 
 @media (prefers-reduced-motion:no-preference) {
-	body::before{
+	body::before {
 		content: ' ';
 		display: block;
 		position: fixed;
@@ -205,39 +234,42 @@ body{
 		overflow: hidden;
 		z-index: -100;
 	}
-  }
+}
 
 body::-webkit-scrollbar {
-    width: 0.2em;
+	width: 0.2em;
 	border-radius: 1em;
 }
- 
- 
+
+
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary-clr);
+	background-color: var(--primary-clr);
 }
 
 
 /* HEADER */
 
-header{
+header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0.3em 1em 0 0;
 	position: sticky;
 	top: 0em;
-	z-index:10000;
+	z-index: 10000;
 }
 
-header img{
-	width: 2em;
-	height: auto;
-	margin: 1em;
+header>a {
 	margin-right: auto;
 }
 
-header > ul:first-of-type{
+header>a>img {
+	width: 2em;
+	height: auto;
+	margin: 1em;
+}
+
+header>ul:first-of-type {
 	display: flex;
 	justify-content: end;
 	list-style-type: none;
@@ -245,7 +277,7 @@ header > ul:first-of-type{
 	margin-right: var(--spacer-lg);
 }
 
-header > ul:first-of-type li a{
+header>ul:first-of-type li a {
 	font-family: var(--ff-btn);
 	color: var(--txt-clr);
 	font-size: calc(var(--fs-p) * 0.8);
@@ -254,18 +286,19 @@ header > ul:first-of-type li a{
 	transition: 0.5s;
 }
 
-header > ul:first-of-type li a:hover, header > ul:first-of-type li a:focus{
+header>ul:first-of-type li a:hover,
+header>ul:first-of-type li a:focus {
 	color: var(--primary-clr);
 }
 
 
 @media only screen and (max-width: 600px) {
-	header > ul:first-of-type{
+	header>ul:first-of-type {
 		display: none;
 	}
-  }
+}
 
-header nav{
+header nav {
 	display: flex;
 	justify-content: start;
 	flex-direction: column;
@@ -281,7 +314,7 @@ header nav{
 
 
 @media (prefers-reduced-motion:no-preference) {
-	header nav.showmenu::before{
+	header nav.showmenu::before {
 		content: ' ';
 		display: block;
 		position: fixed;
@@ -299,11 +332,11 @@ header nav{
 }
 
 header nav.showmenu {
-	translate: 0% 0%;  
-  }
+	translate: 0% 0%;
+}
 
 
-header button{
+header button {
 	z-index: 100;
 	position: relative;
 	cursor: pointer;
@@ -320,62 +353,66 @@ header button{
 
 
 /* Class added = rotateplus  > See script.JS function rule 8/18*/
-header button:hover span:nth-of-type(1), header button:focus span:nth-of-type(1){
+header button:hover span:nth-of-type(1),
+header button:focus span:nth-of-type(1) {
 	width: 40%;
 }
 
 /* Class added = leave  > See script.JS function rule 8/18*/
-header button:hover span:nth-of-type(2), header button:focus span:nth-of-type(2){
+header button:hover span:nth-of-type(2),
+header button:focus span:nth-of-type(2) {
 	width: 60%;
 }
 
 
 /* When class is added (with the JS), dont change the :hover widht anymore */
-header button:hover span:nth-of-type(1).rotateplus, header button:focus span:nth-of-type(1).rotateplus{
+header button:hover span:nth-of-type(1).rotateplus,
+header button:focus span:nth-of-type(1).rotateplus {
 	width: 2.7em;
 }
 
 /* When class is added (with the JS), dont change the :hover widht anymore */
-header button:hover span:nth-of-type(2).leave, header button:focus span:nth-of-type(2).leave{
+header button:hover span:nth-of-type(2).leave,
+header button:focus span:nth-of-type(2).leave {
 	width: 0%;
 }
 
 
 /* Same as :Hover but then > FOR THE FOCUS ON THE BUTTON ANIMATION */
 
-header button:focus span:nth-of-type(1){
+header button:focus span:nth-of-type(1) {
 	width: 40%;
 }
 
-header button:focus span:nth-of-type(2){
+header button:focus span:nth-of-type(2) {
 	width: 60%;
 }
 
-header button:focus span:nth-of-type(1).rotateplus{
+header button:focus span:nth-of-type(1).rotateplus {
 	width: 2.7em;
 }
 
-header button:focus span:nth-of-type(2).leave{
+header button:focus span:nth-of-type(2).leave {
 	width: 0%;
 }
 
 
-.rotatemin{
-	transform:  rotate(-45deg);
+.rotatemin {
+	transform: rotate(-45deg);
 	width: 2.7em;
 }
 
-.rotateplus{
-	transform:  rotate(45deg);
+.rotateplus {
+	transform: rotate(45deg);
 	width: 2.7em;
 }
 
-.leave{
+.leave {
 	width: 0%;
 }
 
 
-header button span{
+header button span {
 	height: 1px;
 	width: 100%;
 	background: var(--txt-clr);
@@ -387,13 +424,13 @@ header button span:nth-of-type(1) {
 	transition: transform 0.4s ease-in-out;
 	transition: 0.3s;
 }
-  
+
 header button span:nth-of-type(2) {
 	transition: transform 0.2s ease-in-out;
 	transition: 0.3s;
 
 }
-  
+
 header button span:nth-of-type(3) {
 	transform-origin: 0%;
 	transition: transform 0.4s ease-in-out;
@@ -401,7 +438,8 @@ header button span:nth-of-type(3) {
 
 
 
-header nav ul{ /* Menu UL */
+header nav ul {
+	/* Menu UL */
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
@@ -409,11 +447,11 @@ header nav ul{ /* Menu UL */
 	margin-bottom: var(--spacer-lg);
 }
 
-header nav ul li{
+header nav ul li {
 	margin-top: var(--spacer);
 }
 
-header nav ul li a{
+header nav ul li a {
 	color: var(--txt-clr);
 	font-family: var(--ff);
 	font-size: var(--fs-6);
@@ -422,11 +460,12 @@ header nav ul li a{
 	text-transform: uppercase;
 }
 
-header nav ul li a:hover, header nav ul li a:focus{
+header nav ul li a:hover,
+header nav ul li a:focus {
 	color: var(--primary-clr);
 }
 
-header nav section{
+header nav section {
 	margin: var(--spacer);
 	display: flex;
 	flex-direction: column;
@@ -434,46 +473,46 @@ header nav section{
 	margin: 0em;
 }
 
-header nav section h2{
+header nav section h2 {
 	color: var(--primary-clr);
 	margin: 0.2em 0em 0.2em 0.3em;
 }
 
 @media only screen and (max-width: 1100px) {
-	header nav section h2{
+	header nav section h2 {
 		font-size: var(--fs-4);
 		margin: 0.2em 0em 0.2em 0.8em;
-	}	
+	}
 }
 
 @media only screen and (max-width: 700px) {
-	header nav section h2{
+	header nav section h2 {
 		font-size: var(--fs-6);
 		margin: 0.2em 0em 0.2em 1.8em;
-	}	
+	}
 }
 
 
 @media (prefers-reduced-motion:no-preference) {
-	header nav section marquee{
+	header nav section marquee {
 		order: 4;
 	}
-	
-	marquee h2{
+
+	marquee h2 {
 		color: var(--primary-clr);
 		font-size: var(--fs-1);
 		margin: 0.2em 0em 0.2em 0em;
 	}
-	
+
 	@media only screen and (max-width: 600px) {
-		marquee h2{
+		marquee h2 {
 			font-size: var(--fs-4);
-		}	
+		}
 	}
 }
 
 
-header nav section a{
+header nav section a {
 	text-decoration: none;
 	color: var(--txt-clr);
 	font-family: var(--ff);
@@ -481,37 +520,40 @@ header nav section a{
 	margin-left: var(--spacer-lg);
 }
 
-header nav section section ul{ /* Social media UL */
+header nav section section ul {
+	/* Social media UL */
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
 	gap: 0em;
 }
 
-header nav section section ul li a{
+header nav section section ul li a {
 	margin: 0em;
 	padding: 0em;
 }
 
 
-i{
+i {
 	color: var(--txt-clr);
 	transition: 0.3s;
 	font-size: var(--fs-6);
 }
 
-i:hover, i:focus{
+i:hover,
+i:focus {
 	color: var(--primary-clr);
 }
 
 
-header nav ul:last-of-type{ /* Sitemap etc. UL */
+header nav ul:last-of-type {
+	/* Sitemap etc. UL */
 	display: flex;
 	flex-direction: row;
 	gap: var(--spacer-md);
 }
 
-header nav ul:last-of-type li a{
+header nav ul:last-of-type li a {
 	font-family: var(--ff);
 	font-size: var(--fs-p);
 	text-transform: capitalize;
@@ -521,7 +563,7 @@ header nav ul:last-of-type li a{
 
 /* FOOTER */
 
-footer{
+footer {
 	margin-top: calc(var(--spacer) * 20);
 	display: flex;
 	flex-direction: column;
@@ -529,12 +571,12 @@ footer{
 	align-items: center;
 }
 
-footer div button h2{
+footer div button h2 {
 	color: var(--primary-clr);
 }
 
 
-footer div button{
+footer div button {
 	z-index: 100;
 	order: 1;
 	position: relative;
@@ -548,6 +590,7 @@ footer div button{
 	display: block;
 	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
 	transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
 	&::after {
 		content: "Contact us";
 		color: var(--primary-clr);
@@ -560,31 +603,34 @@ footer div button{
 		position: absolute;
 		left: 0;
 		transition: inherit;
-	  }
-	  
-	  > span {
+	}
+
+	>span {
 		display: inline-block;
 		transform: translateY(0%);
 		transition: inherit;
-	  }
-	  
-	  &:hover, &:focus {
-		> span {
-		  transform: translateY(-100%);
-		}
-		&::after {
-		  transform: translateY(0%);
-		}
-	  }
+	}
 
-	  &::after, span {
+	&:hover,
+	&:focus {
+		>span {
+			transform: translateY(-100%);
+		}
+
+		&::after {
+			transform: translateY(0%);
+		}
+	}
+
+	&::after,
+	span {
 		padding: .8em 3.85em;
 		min-width: 80px;
-	  }
+	}
 }
 
 
-footer section:first-of-type ul{
+footer section:first-of-type ul {
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
@@ -593,23 +639,23 @@ footer section:first-of-type ul{
 	padding: 0em;
 }
 
-footer address{
+footer address {
 	width: 100%;
 	margin: var(--spacer) 0em;
 }
 
-footer address marquee{
+footer address marquee {
 	width: 100%;
 }
 
-footer address marquee ul{
+footer address marquee ul {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
 	gap: var(--spacer-lg);
 }
 
-footer address marquee ul li a{
+footer address marquee ul li a {
 	text-decoration: none;
 	color: var(--txt-clr);
 	font-family: var(--ff);
@@ -621,12 +667,13 @@ footer address marquee ul li a{
 }
 
 
-footer address marquee ul li a:hover, footer address marquee ul li a:focus{
+footer address marquee ul li a:hover,
+footer address marquee ul li a:focus {
 	color: var(--primary-clr);
 }
 
 
-footer section:last-of-type p{
+footer section:last-of-type p {
 	text-transform: uppercase;
 	margin: var(--spacer);
 	font-size: calc(var(--fs-p) * 0.8);
@@ -635,7 +682,7 @@ footer section:last-of-type p{
 
 
 @media only screen and (max-width: 610px) {
-	footer div button span h2{
+	footer div button span h2 {
 		font-size: var(--fs-4);
 	}
 }

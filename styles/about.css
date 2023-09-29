@@ -5,154 +5,158 @@
 
 /* FIRST SECTION */
 
-main section:first-of-type{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;	
-	position: relative;
+main section:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 
-main section:first-of-type h1{
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+main section:first-of-type h1 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
-main section:first-of-type div{
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+main section:first-of-type div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-main section:first-of-type div button{
-	z-index: 100;
-	order: 1;
-	position: relative;
-	margin: 0em;
-	padding: 0em;
-	background: none;
-	border: none;
-	cursor: pointer;
-	transition: transform 1s;
-	overflow: hidden;
-	display: block;
-	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
-	transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
-	&::after {
-		content: "Play";
-		color: var(--primary-clr);
-		font-family: var(--ff);
-		font-size: var(--fs-1);
-		font-weight: var(--fw-b);
-		text-transform: uppercase;
-		transform: translateY(100%);
-		display: inline-block;
-		position: absolute;
-		left: 0;
-		transition: inherit;
-	  }
-	  
-	  > span {
-		display: inline-block;
-		transform: translateY(0%);
-		transition: inherit;
-	  }
-	  
-	  &:hover, &:focus {
-		> span {
-		  transform: translateY(-100%);
-		}
-		&::after {
-		  transform: translateY(0%);
-		}
-	  }
+main section:first-of-type div button {
+    z-index: 100;
+    order: 1;
+    position: relative;
+    margin: 0em;
+    padding: 0em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 1s;
+    overflow: hidden;
+    display: block;
+    /* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
+    transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
-	  &::after, span {
-		padding: .8em 2.3em;
-		min-width: 80px;
-	  }
-}
+    &::after {
+        content: "Play";
+        color: var(--primary-clr);
+        font-family: var(--ff);
+        font-size: var(--fs-1);
+        font-weight: var(--fw-b);
+        text-transform: uppercase;
+        transform: translateY(100%);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        transition: inherit;
+    }
 
+    >span {
+        display: inline-block;
+        transform: translateY(0%);
+        transition: inherit;
+    }
 
-main section:first-of-type div button span h2{
-	color: var(--primary-clr);
-	font-size: var(--fs-1);
-}
+    &:hover,
+    &:focus {
+        >span {
+            transform: translateY(-100%);
+        }
 
+        &::after {
+            transform: translateY(0%);
+        }
+    }
 
-main section:first-of-type h3{
-	z-index: 100;
-	margin: 0em;
-	font-size: var(--fs-6);
-	font-weight: var(--fw-n);
-	color: var(--primary-clr);
-	position: absolute;
-	top: 9em;
+    &::after,
+    span {
+        padding: .8em 2.3em;
+        min-width: 80px;
+    }
 }
 
 
-
-main section:first-of-type button{
-	order: 2;
-	border-radius: 20em;
-	border: var(--border-sm-red);
-	background: none;
-	padding: 5em 5.5em 5em 5.5em;
-	margin-top: 30em;
-}
-
-main section:first-of-type button i{
-	color: var(--primary-clr);
-	font-size: var(--fs-5);
+main section:first-of-type div button span h2 {
+    color: var(--primary-clr);
+    font-size: var(--fs-1);
 }
 
 
-main section:first-of-type img{
-	clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
-	width: 100vw;
-	height: 80vh;
-	transition: 0.3s;
+main section:first-of-type h3 {
+    z-index: 100;
+    margin: 0em;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-n);
+    color: var(--primary-clr);
+    position: absolute;
+    top: 9em;
 }
 
-main section:first-of-type img:hover{
-	clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
+
+
+main section:first-of-type button {
+    order: 2;
+    border-radius: 20em;
+    border: var(--border-sm-red);
+    background: none;
+    padding: 5em 5.5em 5em 5.5em;
+    margin-top: 30em;
+}
+
+main section:first-of-type button i {
+    color: var(--primary-clr);
+    font-size: var(--fs-5);
+}
+
+
+main section:first-of-type img {
+    clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
+    width: 100vw;
+    height: 80vh;
+    transition: 0.3s;
+}
+
+main section:first-of-type img:hover {
+    clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
 }
 
 
 
 @media only screen and (max-width: 950px) {
-	main section:first-of-type{
-		background: var(--sec-clr);
-		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/fruitless.jpg);
-		width: 100vw;
-		height: 90vh;
-		top: -5em;
-		
-	}
+    main section:first-of-type {
+        background: var(--sec-clr);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/fruitless.jpg);
+        width: 100vw;
+        height: 90vh;
+        top: -5em;
 
-	main section:first-of-type div button span h2{
-		font-size: var(--fs-2);
-	}
+    }
 
-	main section:first-of-type img{
-		clip-path: none;
-		display: none;
-	}	
+    main section:first-of-type div button span h2 {
+        font-size: var(--fs-2);
+    }
+
+    main section:first-of-type img {
+        clip-path: none;
+        display: none;
+    }
 }
 
 
 @media only screen and (min-width: 950px) {
-	main section:first-of-type button{
-		display: none;
-	} 
+    main section:first-of-type button {
+        display: none;
+    }
 }
 
 
@@ -161,7 +165,7 @@ main section:first-of-type img:hover{
 
 /* SMALL INTEL SECTION */
 
-main ul:first-of-type{
+main ul:first-of-type {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -171,7 +175,7 @@ main ul:first-of-type{
     gap: var(--spacer);
 }
 
-main ul:first-of-type li{
+main ul:first-of-type li {
     font-family: var(--ff);
     color: var(--primary-clr);
     font-size: calc(var(--fs-p) /1.3);
@@ -179,101 +183,118 @@ main ul:first-of-type li{
     width: 7em;
 }
 
-main ul:first-of-type li:nth-child(3){
+main ul:first-of-type li:nth-child(3) {
     width: 10em;
 }
 
-main ul:first-of-type li:nth-child(4){
+main ul:first-of-type li:nth-child(4) {
     color: var(--txt-clr);
 }
 
 
-main ul:first-of-type li span{
+main ul:first-of-type li span {
     border: var(--border-sm-red);
     margin: 0 2em 0 -2em;
 }
 
-main ul:first-of-type li:last-of-type span{
+main ul:first-of-type li:last-of-type span {
     border-color: var(--txt-clr);
 }
 
 
 @media only screen and (max-width: 600px) {
-    main ul:first-of-type{
+    main ul:first-of-type {
         display: none;
     }
 
-    main section:nth-of-type(2){
+    main section:nth-of-type(2) {
         margin: 10em 2em 0em 2em;
     }
 }
 
 
 @media (prefers-reduced-motion:no-preference) {
-    main ul:first-of-type li:last-of-type div{
-        height:3em;
+    main ul:first-of-type li:last-of-type div {
+        height: 3em;
         overflow-y: hidden;
     }
-      
-    main ul:first-of-type li:last-of-type > div > div > div{
+
+    main ul:first-of-type li:last-of-type>div>div>div {
         margin-bottom: calc(var(--spacer-md) * 1.5);
-        display:inline-block;
+        display: inline-block;
     }
-      
-    main ul:first-of-type li:last-of-type > div > div:first-of-type{
+
+    main ul:first-of-type li:last-of-type>div>div:first-of-type {
         animation: text-animation 3s infinite;
     }
-    
+
     @keyframes text-animation {
-        0% {margin-top: 0;}
-        20% {margin-top: 0;}
-        40% {margin-top: -1.5em;}
-        60% {margin-top: -1.5em;}
-        80% {margin-top: 0;}
-        100% {margin-top: 0;}
+        0% {
+            margin-top: 0;
+        }
+
+        20% {
+            margin-top: 0;
+        }
+
+        40% {
+            margin-top: -1.5em;
+        }
+
+        60% {
+            margin-top: -1.5em;
+        }
+
+        80% {
+            margin-top: 0;
+        }
+
+        100% {
+            margin-top: 0;
+        }
     }
 }
 
 /* PART OF OUR JOB... */
 
 
-main section:nth-of-type(2){
+main section:nth-of-type(2) {
     margin: 20em 2em 0em 2em;
 }
 
 
-main section:nth-of-type(2) h2{
+main section:nth-of-type(2) h2 {
     font-weight: var(--fw-n);
     font-size: var(--fs-1);
 }
 
 
-main section:nth-of-type(2) h2 span{
+main section:nth-of-type(2) h2 span {
     font-size: 0.3em;
     display: block;
 }
 
 
 @media only screen and (max-width: 1220px) {
-    main section:nth-of-type(2) h2{
+    main section:nth-of-type(2) h2 {
         font-size: var(--fs-2);
     }
 
-    main section:nth-of-type(2) h2 span{
+    main section:nth-of-type(2) h2 span {
         font-size: 0.3em;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    main section:nth-of-type(2){
+    main section:nth-of-type(2) {
         margin: 10em 2em 0em 2em;
     }
 
-    main section:nth-of-type(2) h2{
+    main section:nth-of-type(2) h2 {
         font-size: var(--fs-4);
     }
 
-    main section:nth-of-type(2) h2 span{
+    main section:nth-of-type(2) h2 span {
         font-size: 0.3em;
     }
 }
@@ -283,7 +304,7 @@ main section:nth-of-type(2) h2 span{
 
 /* WHO ARE WE */
 
-main section:nth-of-type(3) h2{
+main section:nth-of-type(3) h2 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -294,21 +315,21 @@ main section:nth-of-type(3) h2{
 }
 
 
-main section:nth-of-type(3){
+main section:nth-of-type(3) {
     column-count: 2;
     margin: 0em 18vw 0em 2em;
     column-gap: var(--spacer-md);
     margin-top: calc(var(--spacer) * 20);
 }
 
-main section:nth-of-type(3) p{
-	font-size: calc(var(--fs-p) * 1.3);
+main section:nth-of-type(3) p {
+    font-size: calc(var(--fs-p) * 1.3);
     line-height: var(--lh-md);
     font-weight: var(--fw-n);
     margin: 0em;
 }
 
-main section:nth-of-type(3) p span{
+main section:nth-of-type(3) p span {
     font-size: var(--fs-6);
     text-transform: uppercase;
     display: block;
@@ -318,24 +339,24 @@ main section:nth-of-type(3) p span{
 
 
 @media only screen and (max-width: 1000px) {
-    main section:nth-of-type(3){
+    main section:nth-of-type(3) {
         column-count: 2;
         margin: 0em 2em 0em 2em;
         column-gap: var(--spacer-md);
     }
 
-    main section:nth-of-type(3) p span{
+    main section:nth-of-type(3) p span {
         margin: var(--spacer) 0em 10em 0em;
     }
 }
 
 
 @media only screen and (max-width: 740px) {
-    main section:nth-of-type(3){
+    main section:nth-of-type(3) {
         column-count: 1;
     }
 
-    main section:nth-of-type(3) p span{
+    main section:nth-of-type(3) p span {
         margin: var(--spacer) 0em var(--spacer) 0em;
     }
 
@@ -346,7 +367,7 @@ main section:nth-of-type(3) p span{
 /* WHAT WE CAN DO FOR YOU */
 
 
-main section:nth-of-type(4){
+main section:nth-of-type(4) {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -355,25 +376,26 @@ main section:nth-of-type(4){
     /* opacity: 0; */
 }
 
-main section:nth-of-type(4) h2{
+main section:nth-of-type(4) h2 {
     text-align: center;
     font-size: var(--fs-6);
     font-weight: var(--fw-n);
 }
 
-main section:nth-of-type(4) ul{
+main section:nth-of-type(4) ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-main section:nth-of-type(4) ul li, main section:nth-of-type(4) ul li:nth-of-type(3){
+main section:nth-of-type(4) ul li,
+main section:nth-of-type(4) ul li:nth-of-type(3) {
     width: auto;
 }
 
 
-main section:nth-of-type(4) ul li a{
+main section:nth-of-type(4) ul li a {
     text-decoration: none;
     font-size: var(--fs-2);
     text-transform: uppercase;
@@ -382,144 +404,147 @@ main section:nth-of-type(4) ul li a{
     line-height: var(--lh);
 }
 
-main section:nth-of-type(4) ul li:nth-of-type(5) a{
+main section:nth-of-type(4) ul li:nth-of-type(5) a {
     color: var(--primary-clr);
 }
 
 
 @media (prefers-reduced-motion:no-preference) {
-    main section:nth-of-type(4) ul li a {      
-      background-image:
-      linear-gradient(
-        to left,
-        var(--txt-clr) 50%,
-        var(--primary-clr) 50%
-      );
-      background-size: 200% 100%;
-      background-position:right bottom;
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-      transition:
-      clip-path .5s,
-      background-position 1s;
+    main section:nth-of-type(4) ul li a {
+        background-image:
+            linear-gradient(to left,
+                var(--txt-clr) 50%,
+                var(--primary-clr) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition:
+            clip-path .5s,
+            background-position 1s;
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(2) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(3) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(4) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
     }
 
-    main section:nth-of-type(4) ul li a:hover, main section:nth-of-type(4) ul li a:focus {
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position:left bottom;
-      }
-  }
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
+}
 
 @media only screen and (max-width: 880px) {
-    main section:nth-of-type(4) ul li a{
+    main section:nth-of-type(4) ul li a {
         font-size: var(--fs-3);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(2) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(3) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(4) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li a:hover, main section:nth-of-type(4) ul li a:focus {
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position:left bottom;
-      }
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
 }
 
 @media only screen and (max-width: 720px) {
-    main section:nth-of-type(4) ul li a{
+    main section:nth-of-type(4) ul li a {
         font-size: var(--fs-4);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(2) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(3) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(4) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li a:hover, main section:nth-of-type(4) ul li a:focus {
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position:left bottom;
-      }
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
 }
 
 @media only screen and (max-width: 550px) {
-    main section:nth-of-type(4) ul li a{
+    main section:nth-of-type(4) ul li a {
         font-size: var(--fs-5);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(2) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(3) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(4) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li a:hover, main section:nth-of-type(4) ul li a:focus {
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position:left bottom;
-      }
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
 }
 
 @media only screen and (max-width: 385px) {
-    main section:nth-of-type(4) ul li a{
+    main section:nth-of-type(4) ul li a {
         font-size: var(--fs-6);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(2) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(3) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li:nth-of-type(4) a{
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
-    main section:nth-of-type(4) ul li a:hover, main section:nth-of-type(4) ul li a:focus {
-        clip-path:polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position:left bottom;
-      }
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
 }
 
 
 
 /* LOGO'S > OUR PARTNERS*/
 
-main section:nth-of-type(5){
+main section:nth-of-type(5) {
     margin: calc(var(--spacer) * 20) 6em 0 6em;
     display: flex;
     flex-wrap: wrap;
@@ -528,7 +553,7 @@ main section:nth-of-type(5){
 }
 
 
-main section:nth-of-type(5) h2{
+main section:nth-of-type(5) h2 {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -538,18 +563,18 @@ main section:nth-of-type(5) h2{
     width: 1px;
 }
 
-main section:nth-of-type(5) img{
+main section:nth-of-type(5) img {
     width: 4em;
     opacity: 50%;
 }
 
 
 @media only screen and (max-width: 700px) {
-    main section:nth-of-type(5){
+    main section:nth-of-type(5) {
         margin: calc(var(--spacer) * 20) 2em 0 2em;
     }
 
-    main section:nth-of-type(5) img{
+    main section:nth-of-type(5) img {
         width: 3.5em;
     }
 }
@@ -559,14 +584,14 @@ main section:nth-of-type(5) img{
 
 /* LATEST AWARDS */
 
-section:nth-of-type(6){
+section:nth-of-type(6) {
     margin: calc(var(--spacer) * 20) var(--spacer-lg) 0em var(--spacer-lg);
     display: grid;
     grid-template-columns: 60% 40%;
     position: relative;
 }
 
-section:nth-of-type(6) > h2{
+section:nth-of-type(6)>h2 {
     color: var(--primary-clr);
     font-size: var(--fs-1);
     margin: 0em;
@@ -574,7 +599,7 @@ section:nth-of-type(6) > h2{
 }
 
 
-section:nth-of-type(6) form{
+section:nth-of-type(6) form {
     grid-column-start: 2;
     display: flex;
     justify-content: left;
@@ -582,7 +607,7 @@ section:nth-of-type(6) form{
 }
 
 
-section:nth-of-type(6) form label{
+section:nth-of-type(6) form label {
     font-family: var(--ff-btn);
     text-transform: uppercase;
     cursor: pointer;
@@ -591,22 +616,26 @@ section:nth-of-type(6) form label{
     opacity: 0.4;
 
     /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
-    --b: 1px;   /* thickness of the corner button */
-    --w: 10px;  /* width of corner button */
-    border: var(--b) solid #0000; /* space for the border */
-    --_g: #000 0 90deg,var(--txt-clr) 0;
+    --b: 1px;
+    /* thickness of the corner button */
+    --w: 10px;
+    /* width of corner button */
+    border: var(--b) solid #0000;
+    /* space for the border */
+    --_g: #000 0 90deg, var(--txt-clr) 0;
     --_p: var(--w) var(--w) border-box no-repeat;
     background:
-      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
-      transition: 0.5s;
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+    transition: 0.5s;
 }
 
 
 
-section:nth-of-type(6) form label:hover, section:nth-of-type(6) form label:focus{
+section:nth-of-type(6) form label:hover,
+section:nth-of-type(6) form label:focus {
     padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
     margin: calc(var(--spacer-md) * 0.5) calc(var(--spacer-lg) * 0.5);
 }
@@ -620,77 +649,79 @@ section:nth-of-type(6) form input[type="radio"] {
 
 
 
-section:nth-of-type(6) form input:checked + label{
+section:nth-of-type(6) form input:checked+label {
     color: var(--txt-clr);
     opacity: 1;
 }
 
-section:nth-of-type(6) div{
+section:nth-of-type(6) div {
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
 
-section:nth-of-type(6) div table{
+section:nth-of-type(6) div table {
     font-family: var(--ff);
     margin-top: var(--spacer-lg);
     width: 100%;
     border-collapse: collapse;
 }
 
-section:nth-of-type(6) div table tr{
+section:nth-of-type(6) div table tr {
     border-top: var(--border-sm);
     cursor: pointer;
     background-image: none;
     transition: background-image 1s;
 }
 
-section:nth-of-type(6) div table tr:hover, section:nth-of-type(6) div table tr:focus{
+section:nth-of-type(6) div table tr:hover,
+section:nth-of-type(6) div table tr:focus {
     background-image: url(../images/fruitless.jpg);
 }
 
 
-section:nth-of-type(6) div table tr:hover td:not(:last-child), section:nth-of-type(6) div table tr:focus td:not(:last-child){
+section:nth-of-type(6) div table tr:hover td:not(:last-child),
+section:nth-of-type(6) div table tr:focus td:not(:last-child) {
     color: var(--primary-clr);
 }
 
-section:nth-of-type(6) div table tr td:first-of-type{
+section:nth-of-type(6) div table tr td:first-of-type {
     width: 30%;
 }
 
-section:nth-of-type(6) div table tr td:last-of-type{
+section:nth-of-type(6) div table tr td:last-of-type {
     text-align: end;
 }
 
 
-section:nth-of-type(6) div table tr td{
+section:nth-of-type(6) div table tr td {
     padding: calc(var(--spacer) * 0.7) 0em;
 }
 
-section:nth-of-type(6) div table tr td:first-of-type{
-    font-size: calc(var(--fs-p) * 0.7);   
+section:nth-of-type(6) div table tr td:first-of-type {
+    font-size: calc(var(--fs-p) * 0.7);
     text-transform: uppercase;
 }
 
-section:nth-of-type(6) div table tr td:first-of-type::before{
+section:nth-of-type(6) div table tr td:first-of-type::before {
     content: 'X ';
     margin-right: var(--spacer);
     opacity: 0.4;
 }
 
 
-section:nth-of-type(6) div table tr td:nth-of-type(2){
+section:nth-of-type(6) div table tr td:nth-of-type(2) {
     font-size: calc(var(--fs-p) * 1.2);
 }
 
 
-section:nth-of-type(6) div table tr td:last-of-type{
+section:nth-of-type(6) div table tr td:last-of-type {
     font-size: calc(var(--fs-5) * 1.2);
 }
 
 
 
-section:nth-of-type(6) button{
+section:nth-of-type(6) button {
     grid-column-start: 1;
     grid-column-end: 3;
     color: var(--txt-clr);
@@ -707,23 +738,27 @@ section:nth-of-type(6) button{
     margin: var(--spacer);
     opacity: 0.4;
 
-     /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
-    --b: 1px;   /* thickness of the corner button */
-    --w: 10px;  /* width of corner button */
-    border: var(--b) solid #0000; /* space for the border */
-    --_g: #000 0 90deg,var(--txt-clr) 0;
+    /* Bron: https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
+    --b: 1px;
+    /* thickness of the corner button */
+    --w: 10px;
+    /* width of corner button */
+    border: var(--b) solid #0000;
+    /* space for the border */
+    --_g: #000 0 90deg, var(--txt-clr) 0;
     --_p: var(--w) var(--w) border-box no-repeat;
     background:
-      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
-      transition: 0.5s;
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+    transition: 0.5s;
 }
 
 
 
-section:nth-of-type(6) button:hover, section:nth-of-type(6) button:focus{
+section:nth-of-type(6) button:hover,
+section:nth-of-type(6) button:focus {
     padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
     opacity: 1;
 }
@@ -731,7 +766,7 @@ section:nth-of-type(6) button:hover, section:nth-of-type(6) button:focus{
 
 
 @media only screen and (max-width: 1150px) {
-    section:nth-of-type(6) form{
+    section:nth-of-type(6) form {
         grid-column-start: 1;
         grid-column-end: 3;
         margin-top: var(--spacer-md);
@@ -740,31 +775,31 @@ section:nth-of-type(6) button:hover, section:nth-of-type(6) button:focus{
 
 
 @media only screen and (max-width: 1000px) {
-    section:nth-of-type(6) div table tr td:first-of-type{
+    section:nth-of-type(6) div table tr td:first-of-type {
         width: 50%;
     }
 }
 
 
 @media only screen and (max-width: 700px) {
-    section:nth-of-type(6) > h2{
+    section:nth-of-type(6)>h2 {
         font-size: var(--fs-3);
     }
 
-    section:nth-of-type(6) div table tr td:first-of-type{
+    section:nth-of-type(6) div table tr td:first-of-type {
         width: 35%;
     }
 
-    section:nth-of-type(6) div table tr td:last-of-type{
+    section:nth-of-type(6) div table tr td:last-of-type {
         font-size: calc(var(--fs-5) * 0.8);
     }
 
-    section:nth-of-type(6) form label{
+    section:nth-of-type(6) form label {
         padding: var(--spacer) var(--spacer-md);
         margin: var(--spacer) var(--spacer) var(--spacer) 0em;
     }
 
-    section:nth-of-type(6){
+    section:nth-of-type(6) {
         margin: calc(var(--spacer) * 20) var(--spacer) 0em var(--spacer);
     }
 
@@ -772,18 +807,18 @@ section:nth-of-type(6) button:hover, section:nth-of-type(6) button:focus{
 
 
 @media only screen and (max-width: 630px) {
-    section:nth-of-type(6) div table tr td:first-of-type{
+    section:nth-of-type(6) div table tr td:first-of-type {
         display: none;
     }
 
-    section:nth-of-type(6) div table tr td:nth-of-type(2){
+    section:nth-of-type(6) div table tr td:nth-of-type(2) {
         width: 100%;
     }
 
 }
 
 @media only screen and (max-width: 536px) {
-    section:nth-of-type(6) button{
+    section:nth-of-type(6) button {
         left: 0;
         right: 0;
         margin-left: 0em;
@@ -793,9 +828,7 @@ section:nth-of-type(6) button:hover, section:nth-of-type(6) button:focus{
 
 
 @media only screen and (max-width: 400px) {
-    section:nth-of-type(6) form label{
+    section:nth-of-type(6) form label {
         font-size: calc(var(--fs-p) * 0.8);
     }
 }
-
-
