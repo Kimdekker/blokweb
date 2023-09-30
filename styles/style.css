@@ -236,15 +236,7 @@ body {
 	}
 }
 
-body::-webkit-scrollbar {
-	width: 0.2em;
-	border-radius: 1em;
-}
 
-
-body::-webkit-scrollbar-thumb {
-	background-color: var(--primary-clr);
-}
 
 
 /* HEADER */
@@ -686,3 +678,5 @@ footer section:last-of-type p {
 		font-size: var(--fs-4);
 	}
 }
+
+

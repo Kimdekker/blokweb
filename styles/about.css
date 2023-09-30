@@ -11,6 +11,8 @@ main section:first-of-type {
     align-items: center;
     flex-direction: column;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -119,23 +121,40 @@ main section:first-of-type button i {
 }
 
 
-main section:first-of-type img {
-    clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
+main section:first-of-type video {
+    margin-top: -7em;
     width: 100vw;
-    height: 80vh;
-    transition: 0.3s;
+    height: 100vh;
 }
 
-main section:first-of-type img:hover {
+main section:first-of-type video:hover {
     clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
 }
+
+
+.clippath{
+    clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
+    transition: clip-path 0.5s;
+}
+
+.clippath-none{
+    clip-path: polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%,  0% 100%, 0% 100%, 100% 100%, 100% 100%);
+    /* animation: clippath 1s ease-in-out; */
+    /* clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%); */
+}
+
+/* @keyframes clippath {
+    0% { clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);}
+    100% { clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);}
+  } */
+
 
 
 
 @media only screen and (max-width: 950px) {
     main section:first-of-type {
         background: var(--sec-clr);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/fruitless.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../video/background-video.mp4);
         width: 100vw;
         height: 90vh;
         top: -5em;
@@ -146,7 +165,7 @@ main section:first-of-type img:hover {
         font-size: var(--fs-2);
     }
 
-    main section:first-of-type img {
+    main section:first-of-type video {
         clip-path: none;
         display: none;
     }
@@ -170,7 +189,7 @@ main ul:first-of-type {
     justify-content: space-between;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 0em var(--spacer-md);
+    margin: -3em var(--spacer-md) 0em var(--spacer-md);
     padding: 0em;
     gap: var(--spacer);
 }
@@ -373,7 +392,6 @@ main section:nth-of-type(4) {
     flex-direction: column;
     margin-top: calc(var(--spacer) * 20);
     position: relative;
-    /* opacity: 0; */
 }
 
 main section:nth-of-type(4) h2 {
@@ -387,6 +405,7 @@ main section:nth-of-type(4) ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin: 0em;
 }
 
 main section:nth-of-type(4) ul li,
@@ -672,17 +691,33 @@ section:nth-of-type(6) div table tr {
     cursor: pointer;
     background-image: none;
     transition: background-image 1s;
+    position: relative;
 }
 
-section:nth-of-type(6) div table tr:hover,
-section:nth-of-type(6) div table tr:focus {
-    background-image: url(../images/fruitless.jpg);
+section:nth-of-type(6) div table tr::before{
+    content:"";
+	position:absolute;
+	inset: 0;
+	background-image: url("../images/fruitless.jpg");
+	background-size:cover;
+	background-position:center center;
+	opacity: 0;
+	transition:.5s;
+}
+
+section:nth-of-type(6) div table tr:hover::before,
+section:nth-of-type(6) div table tr:focus::before {
+	opacity: 0.5;
 }
 
 
 section:nth-of-type(6) div table tr:hover td:not(:last-child),
 section:nth-of-type(6) div table tr:focus td:not(:last-child) {
     color: var(--primary-clr);
+}
+
+section:nth-of-type(6) div table tr td{
+    position: relative;
 }
 
 section:nth-of-type(6) div table tr td:first-of-type {

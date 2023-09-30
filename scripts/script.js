@@ -23,3 +23,15 @@ document.body.addEventListener("mousemove", function (e) {
   cursor.style.left = e.clientX + "px",
     cursor.style.top = e.clientY + "px";
 });
+
+
+// To remove clippath on play 
+var playButton = document.querySelector('section div button')
+
+playButton.onclick = removeClip
+
+function removeClip() {
+  var playButton = document.querySelector('section video')
+
+  playButton.classList.toggle('clippath-none')
+}
