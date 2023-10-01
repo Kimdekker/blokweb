@@ -182,7 +182,7 @@ main ol {
     color: var(--txt-clr);
 }
 
-main ol li{
+main ol li {
     display: flex;
     flex-direction: column;
     margin: var(--spacer);
@@ -190,29 +190,29 @@ main ol li{
     transition: 0.5s;
 }
 
-main ol li:nth-child(1n){
+main ol li:nth-child(1n) {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-main ol li:nth-child(2n){
+main ol li:nth-child(2n) {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
 
-main ol li:nth-child(3n){
+main ol li:nth-child(3n) {
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
 
-main ol li img{
+main ol li img {
     order: 2;
     transition: 0.5s;
 }
 
-main ol li figcaption{
+main ol li figcaption {
     font-family: var(--ff);
     color: var(--txt-clr);
     font-size: calc(var(--fs-p) * 0.8);
@@ -223,11 +223,11 @@ main ol li figcaption{
 }
 
 
-main ol li:hover img{
+main ol li:hover img {
     transform: translateZ(1.5);
 }
 
-main ol li:hover figcaption{
+main ol li:hover figcaption {
     position: absolute;
     inset: 0;
     font-size: var(--fs-3);

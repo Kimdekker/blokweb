@@ -91,7 +91,7 @@
 
 	/* Cursor */
 	--cursor-left: 0;
-    --cursor-top: 0;
+	--cursor-top: 0;
 
 }
 
@@ -221,7 +221,8 @@ p {
 
 body {
 	margin: 0em;
-	overflow-x: hidden;  /* can we? */
+	overflow-x: hidden;
+	/* can we? */
 }
 
 
@@ -685,5 +686,3 @@ footer section:last-of-type p {
 		font-size: var(--fs-4);
 	}
 }
-
-

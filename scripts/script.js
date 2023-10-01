@@ -52,6 +52,8 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
+}, {
+  threshold: 0.2
+});
 
 observer.observe(flyInUnder);

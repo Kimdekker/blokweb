@@ -132,13 +132,13 @@ main section:first-of-type video:hover {
 }
 
 
-.clippath{
+.clippath {
     clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
     transition: clip-path 0.5s;
 }
 
-.clippath-none{
-    clip-path: polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%,  0% 100%, 0% 100%, 100% 100%, 100% 100%);
+.clippath-none {
+    clip-path: polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 100%);
 }
 
 
@@ -152,7 +152,7 @@ main section:first-of-type video:hover {
         top: -5em;
     }
 
-    video{
+    video {
         display: none;
     }
 
@@ -396,14 +396,16 @@ main section:nth-of-type(4) {
 @media (prefers-reduced-motion:no-preference) {
     .hidden {
         opacity: 0;
-        transform: translateY(20em) scale(2);;
+        transform: translateY(20em) scale(2);
+        ;
         transition: opacity 0.5s ease, transform 1.5s ease, filter 1s ease;
         filter: blur(1.5em);
-      }
-      
+    }
+
     .visible {
         opacity: 1;
-        transform: translateY(0) scale(1);;
+        transform: translateY(0) scale(1);
+        ;
         filter: blur(0);
     }
 }
@@ -710,20 +712,20 @@ section:nth-of-type(6) div table tr {
     position: relative;
 }
 
-section:nth-of-type(6) div table tr::before{
-    content:"";
-	position:absolute;
-	inset: 0;
-	background-image: url("../images/fruitless.jpg");
-	background-size:cover;
-	background-position:center center;
-	opacity: 0;
-	transition:.5s;
+section:nth-of-type(6) div table tr::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/fruitless.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: .5s;
 }
 
 section:nth-of-type(6) div table tr:hover::before,
 section:nth-of-type(6) div table tr:focus::before {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 
@@ -732,7 +734,7 @@ section:nth-of-type(6) div table tr:focus td:not(:last-child) {
     color: var(--primary-clr);
 }
 
-section:nth-of-type(6) div table tr td{
+section:nth-of-type(6) div table tr td {
     position: relative;
 }
 
@@ -886,8 +888,17 @@ section:nth-of-type(6) button:focus {
 
 
 /* Filter function */
-
+/* 
 #awards:has(div):has(.class):has(#id) {
     ...
-  }
+} */
 
+/* 
+#awards:checked~ .award,
+#honors:checked~ .honor{
+   display: block;
+}
+
+.content {
+    display: none;
+ } */
