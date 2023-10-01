@@ -89,6 +89,10 @@
 	--border-md-red: calc(var(--border-sm-red) * 3) solid var(--primary-clr);
 	--border-lg-red: calc(var(--border-sm-red) * 5) solid var(--primary-clr);
 
+	/* Cursor */
+	--cursor-left: 0;
+    --cursor-top: 0;
+
 }
 
 /****************/
@@ -212,11 +216,14 @@ p {
 }
 
 
+
 /* BODY */
 
 body {
 	margin: 0em;
+	overflow-x: hidden;  /* can we? */
 }
+
 
 @media (prefers-reduced-motion:no-preference) {
 	body::before {

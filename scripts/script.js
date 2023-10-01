@@ -25,6 +25,7 @@ document.body.addEventListener("mousemove", function (e) {
 });
 
 
+
 // To remove clippath on play 
 var playButton = document.querySelector('section div button')
 
@@ -34,4 +35,23 @@ function removeClip() {
   var playButton = document.querySelector('section video')
 
   playButton.classList.toggle('clippath-none')
+  const playText = document.querySelector('main section:first-of-type div button');
+  playText.innerText = 'New Content';
 }
+
+
+
+// Add scroll animation on list menu homepage
+
+const flyInUnder = document.querySelector('main section:nth-of-type(4)');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+observer.observe(flyInUnder);
