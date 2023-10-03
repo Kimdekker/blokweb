@@ -16,10 +16,23 @@ function foldMenu() {
 
 
 
+// bron: https://jsfiddle.net/ydchauh/4cbk0sq5/
+
+// var cursor = document.getElementById("cursor");
+// document.body.addEventListener("mousemove", function (e) {
+//   cursor.style.left = e.clientX + "px",
+//     cursor.style.top = e.clientY + "px";
+// });
+
+
 document.body.addEventListener("mousemove", function (e) {
   document.documentElement.style.setProperty("--cursorX", `calc(${e.clientX}px - 2.5em)`);
   document.documentElement.style.setProperty("--cursorY", `calc(${e.clientY}px - 2.5em)`);
 });
+
+
+
+//custom properties animeren > transform xy custom properties
 
 
 
@@ -35,26 +48,6 @@ function removeClip() {
   const playText = document.querySelector('main section:first-of-type div button');
   playText.innerText = 'New Content';
 }
-
-
-
-var playButton = document.querySelector('section div button');
-
-playButton.onclick = toggleState;
-
-function toggleState() {
-  var playButton = document.querySelector('section video');
-  var playText = document.querySelector('main section:first-of-type div button span');
-
-  if (playText.innerText === 'X') {
-    playButton.classList.toggle('clippath-none');
-    playText.innerText = 'Play';
-  } else {
-    playButton.classList.toggle('clippath-none');
-    playText.innerText = 'X';
-  }
-}
-
 
 
 
@@ -74,3 +67,20 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(flyInUnder);
+
+
+
+//filter function radiobuttons, bron: Chat GPT
+
+document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    var value = this.value;
+    document.querySelectorAll('tbody tr').forEach(function(row) {
+      if (value === 'awards' || row.classList.contains(value)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+});

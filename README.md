@@ -172,27 +172,50 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Dit ging goed:
+  - Animaties namaken
+  - gecompliceerde dingen afmaken en afvinken
+  - tinkeren met leuke dingen en het uiteindelijk voor elkaar krijgen
+
+  Dit kan beter:
+  Ik heb op dit moment nog niks dat per definitie beter kan. Ik ben nu gewoon lekker bezig en heb nog geen punten van kritiek. Deze komen vast laten nog wel...
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+  De rest van de groep hadden vragen die voor mij niet relevant waren om te vragen, dus heb ik deze niet meegenomen in mijn Readme
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Kim                                                                    | Ananda             | Valentijn      | Alia             |
+  | ---                                                                    | ---                | ---            | ---              |
+  | Tekst moet warpen als ik eroverheen hover, hoe kan ik dat doen?        | ...                | ...            | ...              |
+  | Logosection is met flex gedaan, had ik het beter met grid kunnen doen? | ...                | ...            | ...              |
+  | Hover op kruisje werkt nog niet helemaal zoals ik wil dat het doet     | ...                | ...            | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - De textwarp is te doen met libraries en ik heb waarschijnlijk een canvas nodig. Is gecomliceerd en als ik interesse heb kan ik Cyd Stumpel vragen om hier wat over uit te leggen 
+  - Logosection is prima met flexbox. Het maakt helemaal niks uit wat je gebruikt. Vooral in dit geval.
+  - De hover op het kruisje is gefixt. de .hover moest nog op een aantal selectors en dan kon ik de width aanpassen op de focus. Was een principe dat ik zelf had kunnen zien als ik in de CSS beter had verwoord welke functie met welke reageert in JS
 
+
+  <img src="readme-images/meeting2-1.jpg" width="375px" alt="Sectie dat moet warpen tijdens het hoveren">
+  Sectie dat moet warpen tijdens het hoveren
+
+  <img src="readme-images/meeting2-2.jpg" width="375px" alt="Gefixte kruisje die niet meer bugd">
+  Gefixte kruisje die niet meer bugd
+
+  <img src="readme-images/meeting 2-3.jpg" width="375px" alt="De sectie met de logo's">
+  De sectie met de logo's
+
+
+
+##### Samenvatting meeting
+- Het gaat goed met de code
+- Heb in de meeting ook anderen in het groepje geholpen als een soort semi-assistent
+- Ik heb Cyd een berichtje gestuurd omdat ik wel geinteresseerd ben in Cyd haar kennis en portfolio
+- Veel dingen die ik al wel werkend heb hebben nog een kleine finishing touch nodig. Denk aan: dark mode perfectionaliseren, animations minderen voor mensen die daar gevoelig voor zijn.
 </details>
 
 
@@ -205,7 +228,44 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  Wat kan nog beter:
+  - dark mode is nog niet perfect
+  - er zijn nog een aantal dingen die bewegen als de modus voor overgevoeligheid aan staat. Kan beter
+  - Tabs lijken niet overal juist te werken. Moet gefixt worden
+  - Sommige knoppen hebben nog een focus state nodig
+  - De video is nogsteeds autoplay
+  - Pagina heeft nog geen skip link
+  - De tekst kan nog niet vergroot worden, alhoewel de teskt in het algemeen al redelijk groot is
+
+  Wat is verbeterd:
+  - Overall HTML structuur is veel beter, waardoor heel veel op de lijst is verbeterd.
+  - Beter te volgen voor screenreaders. Ik ben niet meer verloren waar ik ben
+  - De website is toegankelijk gemaakt voor mensen die gevoelig zijn voor beweging
+  - Er is een darkmode aanwezig
+  - buttons zijn buttons, en linkjes zijn a's
+  - De headers zijn goed gestructureerd
+  - Website is geheel responsive zonder dat de pagina opnieuw inlaadt
+  - Afbeeldingen en video's hebben een alt text
+  - De alt text is relevant
+
+
+##### Conclustie
+  Er zijn nog wat kleine dingen die aangepast en/of verbeterd kunnen worden.
+  Waar ik prioriteit aan geef:
+  - Dark mode afmaken
+  - Tabs fixen
+  - Focus states afmaken
+  - Reduced motion afmaken
+
+  Dingen die ik ga doen als er tijd voor is en de rest af is:
+  - skip link maken
+  - Text 200% functie
+
+
+  Verder is de website al een stuk verbeterd ten opzichte van het oude model. Dus hebben we het doel nu al behaald. Fijn.
+
+
 
 </details>
 
@@ -220,25 +280,45 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Wat ging goed:
+  - mouseover met JS maken
+  - Meer JS functies afmaken
+  - Werken met grid om de laatste sectie af te maken
+  - 1E pagina helemaal afgemaakt (op kleine complicated dingetjes na die nog iets meer tijd nodig hebben)
+  - Veel punten gefixt die in de test van eerder deze week nog wat aandacht nodig hadden
+
+  Wat was lastig:
+  Er zijn/waren een aantal dingen die ik nog niet voor elkaar krijg/kreeg:
+  - radiobuttons filter (nog niet gefixt)
+  - Smooth hover over background-image (nog niet gefixt)
+  - Scroll animaties (nog niet ondekt hoe)
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Net als vorige keer waren de vragen van mijn teamgenoten niet relevant voor mij dus heb ik ze niet verwerkt in mijn readme. Ik heb hun vragen samen met de student assistenten opgelost.
+
+  | Kim                                                             | Ananda             | Valentijn    | Alia      |
+  | ---                                                             | ---                | ---          | ---       |
+  | Hoe kan je sections in-animeren?                                | ...                | ...          | ...       |
+  | Hoe maak je een smooth hover als je werkt met background image? | ...                | ...          | ...       |
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  hier na afloop snel de uitkomsten van de meeting vastleggen.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  De vragen die ik had heb ik achteraf na de meeting aan Sanne gevraagd, omdat mijn team vragen had die wat belangrijker waren om te fixen en ik het idee had dat die meer spoed hadden om op te lossen en ik zelf er wel uitkom.
+
+  - Punt 1 heb ik uiteindelijk zelf weten op te lossen, omdat ik Bahaa hoorde praten over intersection observer.
+  - Een smooth (transition: etc.) hover op een background image werkt niet. Daarom hebben we een pseudo-class ::before nodig. Op deze manier heb ik het samen met Sanne opgelost. Code makes sense. ik begrijp het en kan het nu vaker gebruiken.
+
+
+##### Samenvatting meeting
+Er is nog wel redelijk wat te doen. Er moet noig gewerkt worden aan de 2e pagina. Ook moeten er nog kleine dingen worden gedaan vind ik zelf. Ook wil ik wat tijd besteden aan die canvas dingen en ga aankomende maandag daarom met Cyd praten. 
+
+Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de lat hoog leggen voor mezelf, omdat ik er zo veel mogelijk uit wil halen om te kunnen leren. Niet dat ik niks heb geleerd, heel veel zelfs. Ik heb het idee dat ik in een paar weken mezelf heb verdriedubbelt in kennis over front-end.
+
 
 </details>
 
@@ -280,8 +360,15 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  In al mijn bronnen heb ik zelf nog (veel) gespeeld met de source om het zo te maken dat het werkt voor mijn project specfiek. Ik heb eigelijk nergens de code plat gecopy paste en gelaten zoals het is.
+
+  1. https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders voor de border hoeken in de knoppen bij Latest awards (in de index.html)
+  2. https://www.graphicpie.com/css-text-hover-effects/ en dan punt 18 = bron van text animation hover. Daarna zelf nog mee getinkerd
+  3. https://jsfiddle.net/ydchauh/4cbk0sq5/ het startpunt voor de cursor. Deze heb ik vervolgens nog wel aangepast zodat het werkt met custom properties en translate -50% trics.
+  4. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API bron om Intersection observer te begrijpen en toe te passen in de website. 
+  5. Chat GPT om een template te maken voor m'n section observer functie. Deze heb ik vervolgens helemaal gevormd naar wat voor mij relevant is.
+  6. Chat GPT voor de radiobuttons filter
+  7. Sanne t' Hooft voor hulp en duwtjes in de goede richting
+  8. Cyd Stumpel voor het aaraden van wat libraries als: three.js, Lenis en GSAP. Ook voor bronnen als tympanus.net en Yuri Artiukh (YT)
 
 </details>

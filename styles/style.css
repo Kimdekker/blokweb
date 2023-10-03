@@ -198,7 +198,7 @@ p {
 /* MOUSE */
 
 .cursor {
-	position: absolute;
+	position: fixed;
 	border-radius: 50%;
 	transform: translate(var(--cursorX), var(--cursorY));	
 	pointer-events: none;
@@ -220,9 +220,9 @@ body {
 	/* can we? */
 }
 
-:focus-visible, :focus{
+/* :focus-visible, :focus{
 	outline: var(--border-sm-red);
-}
+} */
 
 
 @media (prefers-reduced-motion:no-preference) {
