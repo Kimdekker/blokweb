@@ -104,10 +104,19 @@
 
 
 		<section>
-			<canvas>
-				<h2><span>Part of our job is to find</span> suprising and playfull ways to tell a story.</h2>
-			</canvas>
+				<h2 id="specific-h2"><span>Part of our job is to find</span> suprising and playfull ways to tell a story.</h2>
 		</section>
+
+		<canvas id="canvas"></canvas>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
+			<defs>
+				<filter id="distortion">
+					<feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="noise" />
+					<feDisplacementMap in2="noise" in="SourceGraphic" scale="20" />
+				</filter>
+			</defs>
+		</svg>
+		
 
 		<section>
 			<h2>Who are we</h2>

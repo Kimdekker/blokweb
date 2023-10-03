@@ -181,6 +181,7 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   Ik heb op dit moment nog niks dat per definitie beter kan. Ik ben nu gewoon lekker bezig en heb nog geen punten van kritiek. Deze komen vast laten nog wel...
 
 
+
   ### Agenda voor meeting
   samen met je groepje opstellen
   De rest van de groep hadden vragen die voor mij niet relevant waren om te vragen, dus heb ik deze niet meegenomen in mijn Readme
@@ -294,6 +295,18 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   - Scroll animaties (nog niet ondekt hoe)
 
 
+  <img src="readme-images/meeting3-1.jpg" width="375px" alt="Sectie dat moet gaan smoothscrollen met intersection observer + JS cursor">
+  Sectie dat moet gaan smoothscrollen met intersection observer + JS cursor
+  <img src="readme-images/meeting3-2.jpg" width="375px" alt="Sectie gedaan met grid + responsive. Deze sectie moet nog filteren met de 2 knoppen">
+  Sectie gedaan met grid + responsive. Deze sectie moet nog filteren met de 2 knoppen
+  <img src="readme-images/meeting3-3.jpg" width="375px" alt="Pagina's en verschillende stylesheets">
+  Pagina's en verschillende stylesheets
+  <img src="readme-images/meeting3-4.jpg" width="375px" alt="Javascript na 4 weken werk">
+  Javascript na 4 weken werk.
+
+
+
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
@@ -315,7 +328,7 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
 
 
 ##### Samenvatting meeting
-Er is nog wel redelijk wat te doen. Er moet noig gewerkt worden aan de 2e pagina. Ook moeten er nog kleine dingen worden gedaan vind ik zelf. Ook wil ik wat tijd besteden aan die canvas dingen en ga aankomende maandag daarom met Cyd praten. 
+Er is nog wel redelijk wat te doen. Er moet nog gewerkt worden aan de 2e pagina. Ook moeten er nog kleine dingen worden gedaan vind ik zelf. Ook wil ik wat tijd besteden aan die canvas dingen en ga aankomende maandag daarom met Cyd praten. 
 
 Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de lat hoog leggen voor mezelf, omdat ik er zo veel mogelijk uit wil halen om te kunnen leren. Niet dat ik niks heb geleerd, heel veel zelfs. Ik heb het idee dat ik in een paar weken mezelf heb verdriedubbelt in kennis over front-end.
 
@@ -336,7 +349,47 @@ Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de l
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Dit ging goed:
+  - werken met animaties en code die ik vorig jaar geleerd heb heb ik weten toe te passen op een juiste manier
+    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Ik heb dingen gedaan waar ik hiervoor nog geen verstand van had/nog niet wist dat ik het kon
+    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Gestructureerd werken aan een project met Github
+    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Anderen helpen met code en dingetjes oplossen
+    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+
+  Dit heb ik geleerd:
+  - Coderen met de WCAG in gedachten. Bouwen met toegankelijkheid
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - gebruik maken van mediaquerries als reduced motion en dark mode
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - HTML zo structureren dat de screenreader er makkelijk doorheen komt
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Grid geleerd en toegepast
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Heel veel coole/slimme trucjes met css, zoals conic gradients en clipping masks
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+      
+  - Intersection observer gebruiken 
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - Coole cursor maken met Javascript
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+  - :root gebruiken met custom properties
+      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+
+
+
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
@@ -367,7 +420,7 @@ Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de l
   3. https://jsfiddle.net/ydchauh/4cbk0sq5/ het startpunt voor de cursor. Deze heb ik vervolgens nog wel aangepast zodat het werkt met custom properties en translate -50% trics.
   4. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API bron om Intersection observer te begrijpen en toe te passen in de website. 
   5. Chat GPT om een template te maken voor m'n section observer functie. Deze heb ik vervolgens helemaal gevormd naar wat voor mij relevant is.
-  6. Chat GPT voor de radiobuttons filter
+  6. Chat GPT voor de radiobuttons filter, omdat het niet wilde werken op mijn gebruikelijke manier
   7. Sanne t' Hooft voor hulp en duwtjes in de goede richting
   8. Cyd Stumpel voor het aaraden van wat libraries als: three.js, Lenis en GSAP. Ook voor bronnen als tympanus.net en Yuri Artiukh (YT)
 

@@ -269,6 +269,10 @@ main ul:first-of-type li:last-of-type span {
     }
 }
 
+
+
+
+
 /* PART OF OUR JOB... */
 
 
@@ -277,24 +281,24 @@ main section:nth-of-type(2) {
 }
 
 
-main section:nth-of-type(2) canvas h2 {
+main section:nth-of-type(2) h2 {
     font-weight: var(--fw-n);
     font-size: var(--fs-1);
 }
 
 
-main section:nth-of-type(2) canvas h2 span {
+main section:nth-of-type(2) h2 span {
     font-size: 0.3em;
     display: block;
 }
 
 
 @media only screen and (max-width: 1220px) {
-    main section:nth-of-type(2) canvas h2 {
+    main section:nth-of-type(2) h2 {
         font-size: var(--fs-2);
     }
 
-    main section:nth-of-type(2) canvas h2 span {
+    main section:nth-of-type(2) h2 span {
         font-size: 0.3em;
     }
 }
@@ -304,15 +308,20 @@ main section:nth-of-type(2) canvas h2 span {
         margin: 10em 2em 0em 2em;
     }
 
-    main section:nth-of-type(2) canvas h2 {
+    main section:nth-of-type(2) h2 {
         font-size: var(--fs-4);
     }
 
-    main section:nth-of-type(2) canvas h2 span {
+    main section:nth-of-type(2) h2 span {
         font-size: 0.3em;
     }
 }
 
+
+canvas{
+    display: block;
+    width: 100%;
+}
 
 
 
