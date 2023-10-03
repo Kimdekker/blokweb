@@ -16,12 +16,9 @@ function foldMenu() {
 
 
 
-// bron: https://jsfiddle.net/ydchauh/4cbk0sq5/
-
-var cursor = document.getElementById("cursor");
 document.body.addEventListener("mousemove", function (e) {
-  cursor.style.left = e.clientX + "px",
-    cursor.style.top = e.clientY + "px";
+  document.documentElement.style.setProperty("--cursorX", `calc(${e.clientX}px - 2.5em)`);
+  document.documentElement.style.setProperty("--cursorY", `calc(${e.clientY}px - 2.5em)`);
 });
 
 
@@ -38,6 +35,26 @@ function removeClip() {
   const playText = document.querySelector('main section:first-of-type div button');
   playText.innerText = 'New Content';
 }
+
+
+
+var playButton = document.querySelector('section div button');
+
+playButton.onclick = toggleState;
+
+function toggleState() {
+  var playButton = document.querySelector('section video');
+  var playText = document.querySelector('main section:first-of-type div button span');
+
+  if (playText.innerText === 'X') {
+    playButton.classList.toggle('clippath-none');
+    playText.innerText = 'Play';
+  } else {
+    playButton.classList.toggle('clippath-none');
+    playText.innerText = 'X';
+  }
+}
+
 
 
 

@@ -90,8 +90,8 @@
 	--border-lg-red: calc(var(--border-sm-red) * 5) solid var(--primary-clr);
 
 	/* Cursor */
-	--cursor-left: 0;
-	--cursor-top: 0;
+	--cursorX: calc(50% - 2.5em);
+	--cursorY: calc(50% - 2.5em);
 
 }
 
@@ -197,15 +197,11 @@ p {
 
 /* MOUSE */
 
-/* bron: https://jsfiddle.net/ydchauh/4cbk0sq5/ */
-
 .cursor {
-	position: fixed;
+	position: absolute;
 	border-radius: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translate(var(--cursorX), var(--cursorY));	
 	pointer-events: none;
-	left: -100px;
-	top: 50%;
 	mix-blend-mode: difference;
 	background-color: transparent;
 	z-index: 99999;
@@ -216,13 +212,16 @@ p {
 }
 
 
-
 /* BODY */
 
 body {
 	margin: 0em;
 	overflow-x: hidden;
 	/* can we? */
+}
+
+:focus-visible, :focus{
+	outline: var(--border-sm-red);
 }
 
 
@@ -261,6 +260,11 @@ header {
 
 header>a {
 	margin-right: auto;
+}
+
+
+header>a:focus {
+	border: var(--border-sm-red);
 }
 
 header>a>img {
