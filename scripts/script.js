@@ -30,6 +30,31 @@ document.body.addEventListener("mousemove", function (e) {
   document.documentElement.style.setProperty("--cursorY", `calc(${e.clientY}px - 2.5em)`);
 });
 
+// function iniFollowCursor() {
+// 	document.body.addEventListener("mousemove", updateMouseLocalCoor);
+// }
+
+// function updateMouseLocalCoor(e){
+
+// 	let mouseX = e.clientX;
+// 	let mouseY = e.clientY;
+
+// 	const element = this;
+// 	const elementRectangle = element.getBoundingClientRect();
+	
+// 	let elementWidth = elementRectangle.width;
+// 	let elementHeight = elementRectangle.height;
+// 	let x = mouseX / elementWidth;
+// 	let y = mouseY / elementHeight;
+	
+// 	element.style.setProperty("--mouse-x", x);
+// 	element.style.setProperty("--mouse-y", y);
+// }
+
+// iniFollowCursor();
+
+
+
 
 // To remove clippath on play 
 var playButton = document.querySelector('section div button')
@@ -41,7 +66,7 @@ function removeClip() {
 
   playButton.classList.toggle('clippath-none')
   const playText = document.querySelector('main section:first-of-type div button');
-  playText.innerText = 'New Content';
+  playText.innerText = 'Close';
 }
 
 

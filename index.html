@@ -11,7 +11,7 @@
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/about.css" rel="stylesheet">
-	<link rel="icon" type="imvv age/svg+xml" href="images/favicon.svg">
+	<link rel="icon" href="images/favicon.svg">
 
 </head>
 
@@ -25,10 +25,10 @@
 	<div class='cursor' id="cursor"></div>
 
 	<header>
-		<a alt="Go to homepage" href="index.html"><img alt="Logo of Yetimotion" src="images/favicon.svg"></a>
+		<a aria-label="Go to homepage" href="index.html"><img alt="Logo of Yetimotion" src="images/favicon.svg"></a>
 		<ul>
-			<li><a href="#" alt="Go to our Portfolio">Portfolio</a></li>
-			<li><a href="#" alt="Go to the showreel page">Showreel</a></li>
+			<li><a href="#" aria-label="Go to our Portfolio">Portfolio</a></li>
+			<li><a href="#" aria-label="Go to the showreel page">Showreel</a></li>
 		</ul>
 		<button>
 			<span></span>
@@ -37,32 +37,33 @@
 		</button>
 		<nav>
 			<ul>
-				<li><a href="#" alt="Go to the homepage">Homepage</a></li>
-				<li><a href="#" alt="Go learn more about us">About</a></li>
-				<li><a href="#" alt="Go to our Portfolio">Portfolio</a></li>
-				<li><a href="studiolife.html" alt="Have a look inside our digital studio life">Studio life</a></li>
-				<li><a href="#" alt="Go to our contact page">Contact</a></li>
+				<li><a href="#" aria-label="Go to the homepage">Homepage</a></li>
+				<li><a href="#" aria-label="Go learn more about us">About</a></li>
+				<li><a href="#" aria-label="Go to our Portfolio">Portfolio</a></li>
+				<li><a href="studiolife.html" aria-label="Have a look inside our digital studio life">Studio life</a>
+				</li>
+				<li><a href="#" aria-label="Go to our contact page">Contact</a></li>
 			</ul>
 			<section>
 				<marquee scrollamount="1" scrolldelay="2" truespeed="truespeed">
 					<h2>Get in touch with Yeti</h2>
 				</marquee>
-				<a href="tel:+30 210 6549540">+30 210 6549540</a>
+                <a href="tel:+302106549540" aria-label="Call us at +30 210 6549540">+30 210 6549540</a>
 				<section>
 					<ul>
-						<li><a href="#" alt="Go to our Vimeo page"><i class="fab fa-vimeo-v"></i></a></li>
-						<li><a href="#" alt="Go to our Behance page"><i class="fab fa-behance"></i></a></li>
-						<li><a href="#" alt="Go to our Twitter page"><i class="fab fa-twitter"></i></a></li>
-						<li><a href="#" alt="Go to our Facebook page"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a href="#" alt="Go to our LinkedIn page"><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="#" aria-label="Go to our Vimeo page"><i class="fab fa-vimeo-v"></i></a></li>
+						<li><a href="#" aria-label="Go to our Behance page"><i class="fab fa-behance"></i></a></li>
+						<li><a href="#" aria-label="Go to our Twitter page"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#" aria-label="Go to our Facebook page"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#" aria-label="Go to our LinkedIn page"><i class="fab fa-linkedin-in"></i></a></li>
 					</ul>
 				</section>
-				<a href="mailto: info@yetimotion.com">info@yetimotion.com</a>
+                <a href="mailto:info@yetimotion.com" aria-label="Send us a mail ay info@yetimotion.com">info@yetimotion.com</a>
 			</section>
 			<ul>
-				<li><a href="#">Sitemap</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms and conditions</a></li>
+				<li><a href="#" aria-label="Go to our sitemap">Sitemap</a></li>
+				<li><a href="#" aria-label="Go to our Privacy police conditions">Privacy Policy</a></li>
+				<li><a href="#" aria-label="Go to our Terms and conditions page">Terms and conditions</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -72,14 +73,14 @@
 			<!-- Header H1 is properly hidden, but seen for screenreaders-->
 			<h1>About Yeti</h1>
 			<div>
-				<button alt="Play the video">
+				<button aria-label="Play the video">
 					<span>
 						<h2>We are Yeti</h2>
 					</span>
 				</button>
 			</div>
 			<h3>Hello to you all!</h3>
-			<button alt="Play the video"><i class="fas fa-caret-right"></i></button>
+			<button aria-label="Play the video"><i class="fas fa-caret-right"></i></button>
 			<video class="clippath" loop autoplay muted>
 				<source src="video/background-video.mp4" type="video/mp4">
 			</video>
@@ -104,19 +105,12 @@
 
 
 		<section>
-				<h2 id="specific-h2"><span>Part of our job is to find</span> suprising and playfull ways to tell a story.</h2>
+			<h2><span>Part of our job is to find</span> suprising and playfull ways to tell a story.</h2>
 		</section>
 
+		<!-- Experimenting with canvas attribute, to recreate section above -->
 		<canvas id="canvas"></canvas>
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
-			<defs>
-				<filter id="distortion">
-					<feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="noise" />
-					<feDisplacementMap in2="noise" in="SourceGraphic" scale="20" />
-				</filter>
-			</defs>
-		</svg>
-		
+
 
 		<section>
 			<h2>Who are we</h2>
@@ -132,6 +126,7 @@
 
 
 		<section class="hidden">
+			<!-- On scroll, JS intersectrion observer function puts section on visible -->
 			<h2>What we can do for you</h2>
 			<ul>
 				<li><a href="#">TV commercials</a></li>
@@ -144,7 +139,7 @@
 
 
 		<section>
-			<!-- Header H1 is properly hidden, but seen for screenreaders-->
+			<!-- Header H2 is properly hidden, but seen for screenreaders-->
 			<h2>Our partners</h2>
 			<img src="images/logos/alpha.svg" alt="The logo of Alpha">
 			<img src="images/logos/amazon.svg" alt="The logo of Amazon">
@@ -248,14 +243,14 @@
 				</table>
 			</div>
 
-			<button>Load more</button>
+			<button aria-label="Load more award content">Load more</button>
 		</section>
 
 	</main>
 
 	<footer>
 		<div>
-			<button alt="Get in touch with Yeti">
+			<button aria-label="Get in touch with Yeti">
 				<span>
 					<h2>Get in touch with Yeti</h2>
 				</span>
@@ -263,11 +258,11 @@
 		</div>
 		<section>
 			<ul>
-				<li><a href="#" alt="Go to our Vimeo page"><i class="fab fa-vimeo-v"></i></a></li>
-				<li><a href="#" alt="Go to our Behance page"><i class="fab fa-behance"></i></a></li>
-				<li><a href="#" alt="Go to our Twitter page"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="#" alt="Go to our Facebook page"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="#" alt="Go to our LinkedIn page"><i class="fab fa-linkedin-in"></i></a></li>
+				<li><a href="#" aria-label="Go to our Vimeo page"><i class="fab fa-vimeo-v"></i></a></li>
+				<li><a href="#" aria-label="Go to our Behance page"><i class="fab fa-behance"></i></a></li>
+				<li><a href="#" aria-label="Go to our Twitter page"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#" aria-label="Go to our Facebook page"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#" aria-label="Go to our LinkedIn page"><i class="fab fa-linkedin-in"></i></a></li>
 			</ul>
 		</section>
 
@@ -275,8 +270,8 @@
 			<marquee scrollamount="1" scrolldelay="2" truespeed="truespeed" onmouseover="this.stop();"
 				onmouseout="this.start();">
 				<ul>
-					<li><a href="tel:+30 210 6549540">+30 210 6549540</a></li>
-					<li><a href="mailto: info@yetimotion.com">info@yetimotion.com</a></li>
+					<li><a href="tel:+302106549540">+30 210 6549540</a></li>
+					<li><a href="mailto:info@yetimotion.com">info@yetimotion.com</a></li>
 					<li><a href="#">Sitemap</a></li>
 					<li><a href="#">Privacy Policy</a></li>
 					<li><a href="#">Terms and conditions</a></li>

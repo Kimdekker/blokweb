@@ -12,6 +12,10 @@
 	background: var(--primary-clr);
 }
 
+:focus-visible{
+	border: var(--border-sm-red);
+}
+
 /*********************/
 /* FONT FACES */
 /*********************/
@@ -146,10 +150,19 @@ p {
 /* MEDIA QUERIES DARK/LIGHT THEMES*/
 /**********************************/
 
-@media (prefers-color-scheme: dark) {
-	body {
-		color: var(--txt-clr);
-		background: var(--sec-clr);
+@media (prefers-color-scheme: light) {
+	:root{
+		--sec-clr: #FFF;
+		--txt-clr: #000;
+	}
+
+	main section:nth-of-type(5) {
+		background-color: var(--txt-clr);
+		padding: var(--spacer-lg);
+	}
+
+	#canvas{
+		background-color: var(--txt-clr);
 	}
 }
 
@@ -189,60 +202,75 @@ p {
 }
 
 
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes text-animation {
+	0% {
+		margin-top: 0;
+	}
+
+	20% {
+		margin-top: 0;
+	}
+
+	40% {
+		margin-top: -1.5em;
+	}
+
+	60% {
+		margin-top: -1.5em;
+	}
+
+	80% {
+		margin-top: 0;
+	}
+
+	100% {
+		margin-top: 0;
+	}
+}
+
+
+@keyframes down{
+	0% {
+		margin-top: -5em;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: 1em;
+		opacity: 1;
+	}
+}
+
 
 
 /****************/
 /* MY STYLING */
 /****************/
 
-/* MOUSE */
-
-.cursor {
-	position: fixed;
-	border-radius: 50%;
-	transform: translate(var(--cursorX), var(--cursorY));	
-	pointer-events: none;
-	mix-blend-mode: difference;
-	background-color: transparent;
-	z-index: 99999;
-	border: var(--border-sm-red);
-	height: 5em;
-	width: 5em;
-	transition: all 300ms ease-out;
-}
-
 
 /* BODY */
 
 body {
 	margin: 0em;
-	overflow-x: hidden;
-	/* can we? */
+	overflow-x: hidden; /* can we? */	
 }
-
-/* :focus-visible, :focus{
-	outline: var(--border-sm-red);
-} */
-
-
-@media (prefers-reduced-motion:no-preference) {
-	body::before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: -50%;
-		top: -50%;
-		width: 200vw;
-		height: 200vh;
-		opacity: 0.3;
-		background-image: url(../images/noise.png);
-		background-repeat: repeat;
-		animation: noise 12s steps(10) infinite;
-		overflow: hidden;
-		z-index: -100;
-	}
-}
-
 
 
 
@@ -290,6 +318,14 @@ header>ul:first-of-type li a {
 	transition: 0.5s;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+		color: var(--txt-clr);
+		background: var(--sec-clr);
+	}
+}
+
+
 header>ul:first-of-type li a:hover,
 header>ul:first-of-type li a:focus {
 	color: var(--primary-clr);
@@ -313,27 +349,8 @@ header nav {
 	right: 0;
 	background-color: var(--sec-clr);
 	translate: 0% 100%;
-	transition: 0.3s;
 }
 
-
-@media (prefers-reduced-motion:no-preference) {
-	header nav.showmenu::before {
-		content: ' ';
-		display: block;
-		position: fixed;
-		left: -50%;
-		top: -50%;
-		width: 200vw;
-		height: 200vh;
-		opacity: 0.3;
-		background-image: url(../images/noise.png);
-		background-repeat: repeat;
-		animation: noise 12s steps(10) infinite;
-		overflow: hidden;
-		z-index: -1;
-	}
-}
 
 header nav.showmenu {
 	translate: 0% 0%;
@@ -425,19 +442,11 @@ header button span {
 
 header button span:nth-of-type(1) {
 	transform-origin: 0%;
-	transition: transform 0.4s ease-in-out;
-	transition: 0.3s;
 }
 
-header button span:nth-of-type(2) {
-	transition: transform 0.2s ease-in-out;
-	transition: 0.3s;
-
-}
 
 header button span:nth-of-type(3) {
 	transform-origin: 0%;
-	transition: transform 0.4s ease-in-out;
 }
 
 
@@ -497,23 +506,7 @@ header nav section h2 {
 }
 
 
-@media (prefers-reduced-motion:no-preference) {
-	header nav section marquee {
-		order: 4;
-	}
 
-	marquee h2 {
-		color: var(--primary-clr);
-		font-size: var(--fs-1);
-		margin: 0.2em 0em 0.2em 0em;
-	}
-
-	@media only screen and (max-width: 600px) {
-		marquee h2 {
-			font-size: var(--fs-4);
-		}
-	}
-}
 
 
 header nav section a {
@@ -589,7 +582,6 @@ footer div button {
 	background: none;
 	border: none;
 	cursor: pointer;
-	transition: transform 1s;
 	overflow: hidden;
 	display: block;
 	/* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
@@ -632,6 +624,8 @@ footer div button {
 		min-width: 80px;
 	}
 }
+
+
 
 
 footer section:first-of-type ul {
@@ -688,5 +682,112 @@ footer section:last-of-type p {
 @media only screen and (max-width: 610px) {
 	footer div button span h2 {
 		font-size: var(--fs-4);
+	}
+}
+
+
+
+
+/**********************/
+/* REDUCED MODUS NOT */
+/**********************/
+@media (prefers-reduced-motion:no-preference) {
+	body::before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: -50%;
+		top: -50%;
+		width: 200vw;
+		height: 200vh;
+		opacity: 0.3;
+		background-image: url(../images/noise.png);
+		background-repeat: repeat;
+		animation: noise 12s steps(10) infinite;
+		overflow: hidden;
+		z-index: -100;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: start;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: var(--sec-clr);
+		translate: 0% 100%;
+		transition: 0.3s;
+	}
+
+	header nav.showmenu::before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: -50%;
+		top: -50%;
+		width: 200vw;
+		height: 200vh;
+		opacity: 0.3;
+		background-image: url(../images/noise.png);
+		background-repeat: repeat;
+		animation: noise 12s steps(10) infinite;
+		overflow: hidden;
+		z-index: -1;
+	}
+
+	header button span:nth-of-type(1) {
+		transform-origin: 0%;
+		transition: transform 0.4s ease-in-out;
+		transition: 0.3s;
+	}
+	
+	header button span:nth-of-type(2) {
+		transition: transform 0.2s ease-in-out;
+		transition: 0.3s;
+	
+	}
+	
+	header button span:nth-of-type(3) {
+		transform-origin: 0%;
+		transition: transform 0.4s ease-in-out;
+	}
+
+	footer div button {
+		transition: transform 1s;
+	}
+
+/* MOUSE */
+
+	.cursor {
+		position: fixed;
+		border-radius: 50%;
+		transform: translate(var(--cursorX), var(--cursorY));	
+		pointer-events: none;
+		mix-blend-mode: difference;
+		background-color: transparent;
+		z-index: 99999;
+		border: var(--border-sm-red);
+		height: 5em;
+		width: 5em;
+		transition: all 300ms ease-out;
+	}
+
+	header nav section marquee {
+		order: 4;
+	}
+
+	marquee h2 {
+		color: var(--primary-clr);
+		font-size: var(--fs-1);
+		margin: 0.2em 0em 0.2em 0em;
+	}
+
+	@media only screen and (max-width: 600px) {
+		marquee h2 {
+			font-size: var(--fs-4);
+		}
 	}
 }

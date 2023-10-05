@@ -43,7 +43,7 @@ main section:first-of-type div button {
     background: none;
     border: none;
     cursor: pointer;
-    transition: transform 1s;
+    /* transition: transform 1s; */
     overflow: hidden;
     display: block;
     /* Bron van de text animation hover hieronder: https://www.graphicpie.com/css-text-hover-effects/ > Punt 18 */
@@ -131,10 +131,13 @@ main section:first-of-type video:hover {
     clip-path: polygon(58% 12%, 40% 63%, 55% 58%, 38% 88%, 70% 12%, 26% 9%, 35% 22%, 40% 3%);
 }
 
+main section:first-of-type video.clippath-none:hover {
+    clip-path: polygon(100% 0%, 100% 0%, 0% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 100%);
+    transition: clip-path 0.5s;
+}
 
 .clippath {
     clip-path: polygon(52% 8%, 36% 57%, 70% 57%, 35% 100%, 66% 8%, 28% 8%, 36% 29%, 44% 8%);
-    transition: clip-path 0.5s;
 }
 
 .clippath-none {
@@ -227,51 +230,6 @@ main ul:first-of-type li:last-of-type span {
 }
 
 
-@media (prefers-reduced-motion:no-preference) {
-    main ul:first-of-type li:last-of-type div {
-        height: 3em;
-        overflow-y: hidden;
-    }
-
-    main ul:first-of-type li:last-of-type>div>div>div {
-        margin-bottom: calc(var(--spacer-md) * 1.5);
-        display: inline-block;
-    }
-
-    main ul:first-of-type li:last-of-type>div>div:first-of-type {
-        animation: text-animation 3s infinite;
-    }
-
-    @keyframes text-animation {
-        0% {
-            margin-top: 0;
-        }
-
-        20% {
-            margin-top: 0;
-        }
-
-        40% {
-            margin-top: -1.5em;
-        }
-
-        60% {
-            margin-top: -1.5em;
-        }
-
-        80% {
-            margin-top: 0;
-        }
-
-        100% {
-            margin-top: 0;
-        }
-    }
-}
-
-
-
-
 
 /* PART OF OUR JOB... */
 
@@ -318,7 +276,7 @@ main section:nth-of-type(2) h2 span {
 }
 
 
-canvas{
+canvas {
     display: block;
     width: 100%;
 }
@@ -402,25 +360,6 @@ main section:nth-of-type(4) {
 
 
 
-@media (prefers-reduced-motion:no-preference) {
-    .hidden {
-        opacity: 0;
-        transform: translateY(20em) scale(2);
-        ;
-        transition: opacity 0.5s ease, transform 1.5s ease, filter 1s ease;
-        filter: blur(1.5em);
-    }
-
-    .visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        ;
-        filter: blur(0);
-    }
-}
-
-
-
 main section:nth-of-type(4) h2 {
     text-align: center;
     font-size: var(--fs-6);
@@ -450,44 +389,9 @@ main section:nth-of-type(4) ul li a {
     line-height: var(--lh);
 }
 
+
 main section:nth-of-type(4) ul li:nth-of-type(5) a {
     color: var(--primary-clr);
-}
-
-
-@media (prefers-reduced-motion:no-preference) {
-    main section:nth-of-type(4) ul li a {
-        background-image:
-            linear-gradient(to left,
-                var(--txt-clr) 50%,
-                var(--primary-clr) 50%);
-        background-size: 200% 100%;
-        background-position: right bottom;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transition:
-            clip-path .5s,
-            background-position 1s;
-    }
-
-    main section:nth-of-type(4) ul li:nth-of-type(2) a {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
-    }
-
-    main section:nth-of-type(4) ul li:nth-of-type(3) a {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
-    }
-
-    main section:nth-of-type(4) ul li:nth-of-type(4) a {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
-    }
-
-    main section:nth-of-type(4) ul li a:hover,
-    main section:nth-of-type(4) ul li a:focus {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        background-position: left bottom;
-    }
 }
 
 @media only screen and (max-width: 880px) {
@@ -676,7 +580,6 @@ section:nth-of-type(6) form label {
         conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
         conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
         conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
-    transition: 0.5s;
 }
 
 
@@ -686,6 +589,8 @@ section:nth-of-type(6) form label:focus {
     padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
     margin: calc(var(--spacer-md) * 0.5) calc(var(--spacer-lg) * 0.5);
 }
+
+
 
 
 /* To get rid of the radio button cirkle */
@@ -815,7 +720,6 @@ section:nth-of-type(6) button {
         conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p),
         conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
         conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
-    transition: 0.5s;
 }
 
 
@@ -825,7 +729,6 @@ section:nth-of-type(6) button:focus {
     padding: calc(var(--spacer-md) * 0.8) calc(var(--spacer-lg) * 0.8);
     opacity: 1;
 }
-
 
 
 @media only screen and (max-width: 1150px) {
@@ -897,18 +800,83 @@ section:nth-of-type(6) button:focus {
 }
 
 
-/* Filter function */
-/* 
-#awards:has(div):has(.class):has(#id) {
-    ...
-} */
 
-/* 
-#awards:checked~ .award,
-#honors:checked~ .honor{
-   display: block;
+
+
+/**********************/
+/* REDUCED MODUS NOT */
+/**********************/
+
+@media (prefers-reduced-motion:no-preference) {
+    main section:first-of-type div button {
+        transition: transform 1s;
+    }
+
+    main ul:first-of-type li:last-of-type div {
+        height: 3em;
+        overflow-y: hidden;
+    }
+
+    main ul:first-of-type li:last-of-type>div>div>div {
+        margin-bottom: calc(var(--spacer-md) * 1.5);
+        display: inline-block;
+    }
+
+    main ul:first-of-type li:last-of-type>div>div:first-of-type {
+        animation: text-animation 3s infinite;
+    }
+
+    .hidden {
+        opacity: 0;
+        transform: translateY(20em) scale(2);
+        transition: opacity 0.5s ease, transform 1.5s ease, filter 1s ease;
+        filter: blur(1.5em);
+    }
+
+    .visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+    main section:nth-of-type(4) ul li a {
+        background-image:
+            linear-gradient(to left,
+                var(--txt-clr) 50%,
+                var(--primary-clr) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition:
+            clip-path .5s,
+            background-position 1s;
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(2) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(3) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 70%);
+    }
+
+    main section:nth-of-type(4) ul li:nth-of-type(4) a {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    }
+
+    main section:nth-of-type(4) ul li a:hover,
+    main section:nth-of-type(4) ul li a:focus {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        background-position: left bottom;
+    }
+
+    section:nth-of-type(6) button {
+        transition: 0.5s;
+    }
+
+    section:nth-of-type(6) form label {
+        transition: 0.5s;
+    }
 }
-
-.content {
-    display: none;
- } */

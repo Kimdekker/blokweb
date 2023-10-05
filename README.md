@@ -345,59 +345,91 @@ Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de l
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/end-1.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/end-2.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/end-3.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/end-4.jpg" width="375px" alt="uitomst opdracht 1">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Dit ging goed:
   - werken met animaties en code die ik vorig jaar geleerd heb heb ik weten toe te passen op een juiste manier
-    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt1.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt1.2.jpg.jpg" width="375px" alt="top">
+
 
   - Ik heb dingen gedaan waar ik hiervoor nog geen verstand van had/nog niet wist dat ik het kon
-    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt2.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt2.1.jpg" width="375px" alt="top">
+
 
   - Gestructureerd werken aan een project met Github
-    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt3.jpg" width="375px" alt="top">
 
   - Anderen helpen met code en dingetjes oplossen
-    <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt4.jpg" width="375px" alt="top">
 
 
   Dit heb ik geleerd:
   - Coderen met de WCAG in gedachten. Bouwen met toegankelijkheid
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
   - gebruik maken van mediaquerries als reduced motion en dark mode
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt5.jpg" width="375px" alt="top">
+    <img src="readme-images/good.pt5.1.jpg" width="375px" alt="top">
+
 
   - HTML zo structureren dat de screenreader er makkelijk doorheen komt
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt6.jpg" width="375px" alt="top">
 
   - Grid geleerd en toegepast
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt7.jpg" width="375px" alt="top">
 
   - Heel veel coole/slimme trucjes met css, zoals conic gradients en clipping masks
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt8.jpg" width="375px" alt="top">
       
   - Intersection observer gebruiken 
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt9.jpg" width="375px" alt="top">
 
   - Coole cursor maken met Javascript
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-pt10.jpg" width="375px" alt="top">
 
   - :root gebruiken met custom properties
-      <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+    <img src="readme-images/good-root.jpg" width="375px" alt="top">
 
 
-
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Niet gelukt:
+  - Werken met de libraries was lastig en kostte me een hele dag om een beetje te kunnen fixen. Het is uiteindelijk niet helemaal gelukt, maar ben wel tevreden met wat ik in 1 dag hebben kunnen maken als total newby
+
+  <img src="readme-images/bad-1.jpg" width="375px" alt="bummer">
+    <img src="readme-images/library.jpg" width="375px" alt="bummer">
+
+
+
+   - De Javascript cursor was lastig, omdat ik eerst een had die niet semantisch correct was, daarna een had die semantisch niet heel veel beter was en daarna met een heb geexperimenteerd (die een van jou Sanne) die uiteindelijk niet optijd af is gekregen... Vind ik jammer. Uitendelijk heb ik hem op v2 gehouden.
+
+  <img src="readme-images/bad-2.jpg" width="375px" alt="bummer">
+    <img src="readme-images/bad-mouse.jpg" width="375px" alt="bummer">
+
+
+
+  - Als je klikt op Play in de index.html, zou er een kruisje moeten komen. Het is niet gelukt deze functie voor elkaar te krijgen.
+  <img src="readme-images/bad-3.jpg" width="375px" alt="bummer">
+
+
+
+  Dit was lastig:
+  - De animaties die op de index.html staan (en footer), waar je overheen hovert en dan veranderd de tekst. Deze waren lastig positioneren en hebben me meerdere dagen gekost om uiteindelijk goed te hebben staan. Uiteindelijk dus wel gelukt, maar was een challenge.
+
+    <img src="readme-images/good-pt2.jpg" width="375px" alt="bummer">
+
+  
+
+  Verder heb ik heel veel nieuwe dingen geleerd (deze staan onder andere in het positieve lijstje hierboven) die even tijd nodig hadden om goed te begrijpen en vaker toe te kunnen passen. Deze vond ik dan eerst lastig, maar na wat tinkeren en klooien kon ik er wel inkomen. 
+
 </details>
 
 
@@ -409,19 +441,12 @@ Heel veel dingen werken ook wel al, daar ben ik tevreden over, maar wil wel de l
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
-
-  In al mijn bronnen heb ik zelf nog (veel) gespeeld met de source om het zo te maken dat het werkt voor mijn project specfiek. Ik heb eigelijk nergens de code plat gecopy paste en gelaten zoals het is.
-
   1. https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders voor de border hoeken in de knoppen bij Latest awards (in de index.html)
   2. https://www.graphicpie.com/css-text-hover-effects/ en dan punt 18 = bron van text animation hover. Daarna zelf nog mee getinkerd
   3. https://jsfiddle.net/ydchauh/4cbk0sq5/ het startpunt voor de cursor. Deze heb ik vervolgens nog wel aangepast zodat het werkt met custom properties en translate -50% trics.
   4. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API bron om Intersection observer te begrijpen en toe te passen in de website. 
-  5. Chat GPT om een template te maken voor m'n section observer functie. Deze heb ik vervolgens helemaal gevormd naar wat voor mij relevant is.
-  6. Chat GPT voor de radiobuttons filter, omdat het niet wilde werken op mijn gebruikelijke manier
-  7. Sanne t' Hooft voor hulp en duwtjes in de goede richting
-  8. Cyd Stumpel voor het aaraden van wat libraries als: three.js, Lenis en GSAP. Ook voor bronnen als tympanus.net en Yuri Artiukh (YT)
+  5. Chat GPT voor de radiobuttons filter, omdat het niet wilde werken op mijn gebruikelijke manier (Geholpen met het Javascript stukje)
+  6. Sanne t' Hooft voor hulp en duwtjes in de goede richting in het algemeen.
+  7. Cyd Stumpel voor het aaraden van wat libraries als: three.js, Lenis en GSAP. Ook voor bronnen als tympanus.net en Yuri Artiukh (YT) en het inspireren van het maken van een canvas en daarin uitproberen.
 
 </details>
