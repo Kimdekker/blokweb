@@ -238,6 +238,7 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
   - De video is nogsteeds autoplay
   - Pagina heeft nog geen skip link
   - De tekst kan nog niet vergroot worden, alhoewel de teskt in het algemeen al redelijk groot is
+  - Alia-label is nu ook een alt. Alt veranderen naar alia-label
 
   Wat is verbeterd:
   - Overall HTML structuur is veel beter, waardoor heel veel op de lijst is verbeterd.
@@ -254,6 +255,7 @@ https://yetimotion.com/studiolife_category/all-cool-stuff/
 ##### Conclustie
   Er zijn nog wat kleine dingen die aangepast en/of verbeterd kunnen worden.
   Waar ik prioriteit aan geef:
+  - Alt veranderen naar alia-label op a
   - Dark mode afmaken
   - Tabs fixen
   - Focus states afmaken
